@@ -3,27 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tool Setup Guide</title>
+    <title>Tool Library | MyToolHub</title>
     <link rel="stylesheet" href="style.css">
     <style>
-        .command-box { background: #1a1a1a; padding: 15px; border-left: 4px solid #00ff41; margin: 10px 0; text-align: left; color: #fff; font-family: monospace; overflow-x: auto; }
+        .command-box { background: #101010; padding: 12px; border-left: 3px solid #00ff41; margin: 10px 0; text-align: left; color: #00ff41; font-family: monospace; font-size: 0.85rem; border-radius: 0 5px 5px 0; }
         .tag { font-size: 0.7rem; background: #00ff41; color: #000; padding: 2px 6px; border-radius: 4px; font-weight: bold; }
+        .tool-card { width: 95%; max-width: 600px; margin-bottom: 25px; border: 1px solid #333; }
+        h2 { color: #fff; text-transform: uppercase; letter-spacing: 1px; }
     </style>
 </head>
 <body>
+
     <header>
-        <h1>TOOL SETUP CENTER</h1>
-        <p>Android (Termux) & iOS (iSH) Commands</p>
+        <h1>TOOL REPOSITORY</h1>
+        <p>Manage your Termux & iSH tools easily.</p>
     </header>
-    <div class="container">
-        <section class="card" style="width: 90%; max-width: 600px;">
-            <h2>🛠️ MaxPhisher Setup</h2>
-            <p><span class="tag">ANDROID / TERMUX</span></p>
-            <div class="command-box">pkg update && pkg upgrade -y<br>pkg install python git -y<br>git clone https://github.com/KasRoudra/MaxPhisher<br>cd MaxPhisher<br>chmod +x *<br>python3 maxphisher.py</div>
-            <p><span class="tag">iOS / iSH (ALPINE)</span></p>
-            <div class="command-box">apk update && apk add python3 git<br>git clone https://github.com/KasRoudra/MaxPhisher<br>cd MaxPhisher<br>chmod +x *<br>python3 maxphisher.py</div>
-        </section>
-    </div>
-    <br><a href="index.html" style="color: #00ff41; text-decoration: none;">[ Back to Dashboard ]</a>
+
+    <div id="tool-container" class="container">
+        </div>
+
+    <br><a href="index.html" style="color: #00ff41; text-decoration: none;">[ Back to Dashboard ]</a><br><br>
+
+    <script>
+        // --- YAHAN APNE TOOLS ADD KAREIN ---
+        const myTools = [
+            {
+                name: "MaxPhisher",
+                link: "https://github.com/KasRoudra/MaxPhisher",
+                folder: "MaxPhisher",
+                file: "maxphisher.py"
+            },
+            {
+                name: "PyPhisher",
+                link: "https://github.com/KasRoudra/PyPhisher",
+                folder: "PyPhisher",
+                file: "pyphisher.py"
+            }
+            // Naya tool yahan niche add karein (Sirf copy-paste)
+        ];
+
+        // Tool Cards generate karne ka function
+        const container = document.getElementById('tool-container');
+        myTools.forEach(tool => {
+            const card = document.createElement('section');
+            card.className = 'card tool-card';
+            card.innerHTML = `
+                <h2>${tool.name}</h2>
+                <hr border="1" color="#222">
+                <p><span class="tag">TERMUX (ANDROID)</span></p>
+                <div class="command-box">
+                    pkg update && pkg upgrade -y<br>
+                    pkg install python git -y<br>
+                    git clone ${tool.link}<br>
+                    cd ${tool.folder} && chmod +x *<br>
+                    python3 ${tool.file}
+                </div>
+                <p><span class="tag">iSH (ALPINE/iOS)</span></p>
+                <div class="command-box">
+                    apk update && apk add python3 git<br>
+                    git clone ${tool.link}<br>
+                    cd ${tool.folder} && chmod +x *<br>
+                    python3 ${tool.file}
+                </div>
+            `;
+            container.appendChild(card);
+        });
+    </script>
 </body>
 </html>
