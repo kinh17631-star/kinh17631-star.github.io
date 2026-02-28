@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tool Setup Guide</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .command-box { background: #1a1a1a; padding: 15px; border-left: 4px solid #00ff41; margin: 10px 0; text-align: left; color: #fff; font-family: monospace; overflow-x: auto; }
+        .tag { font-size: 0.7rem; background: #00ff41; color: #000; padding: 2px 6px; border-radius: 4px; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>TOOL SETUP CENTER</h1>
+        <p>Android (Termux) & iOS (iSH) Commands</p>
+    </header>
+    <div class="container">
+        <section class="card" style="width: 90%; max-width: 600px;">
+            <h2>🛠️ MaxPhisher Setup</h2>
+            <p><span class="tag">ANDROID / TERMUX</span></p>
+            <div class="command-box">pkg update && pkg upgrade -y<br>pkg install python git -y<br>git clone https://github.com/KasRoudra/MaxPhisher<br>cd MaxPhisher<br>chmod +x *<br>python3 maxphisher.py</div>
+            <p><span class="tag">iOS / iSH (ALPINE)</span></p>
+            <div class="command-box">apk update && apk add python3 git<br>git clone https://github.com/KasRoudra/MaxPhisher<br>cd MaxPhisher<br>chmod +x *<br>python3 maxphisher.py</div>
+        </section>
+    </div>
+    <br><a href="index.html" style="color: #00ff41; text-decoration: none;">[ Back to Dashboard ]</a>
+</body>
+</html>
