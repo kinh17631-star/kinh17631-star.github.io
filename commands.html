@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Installation Commands</title>
+    <style>
+        body { background: #0d1117; color: #c9d1d9; font-family: 'Courier New', monospace; padding: 20px; }
+        .terminal { background: #000; border: 1px solid #30363d; padding: 25px; border-radius: 12px; color: #58a6ff; line-height: 1.6; word-break: break-all; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+        .copy-btn { background: #2f81f7; color: white; border: none; padding: 15px 30px; border-radius: 8px; margin-top: 30px; cursor: pointer; font-weight: bold; width: 100%; }
+    </style>
+</head>
+<body>
+    <h2 style="font-family: sans-serif; color:white;">Terminal Commands:</h2>
+    <div class="terminal" id="cmd">
+        pkg update && pkg upgrade -y && pkg install git -y && git clone https://github.com/kinh17631-star/MyToolHub && cd MyToolHub/phoneinfo && bash phoneinfo.sh
+    </div>
+    <button class="copy-btn" onclick="copy()">Copy to Clipboard</button>
+
+    <script>
+        function copy() {
+            let t = document.getElementById('cmd').innerText;
+            navigator.clipboard.writeText(t);
+            alert("Commands Copied! Paste them in Termux/iSH.");
+        }
+    </script>
+</body>
+</html>
