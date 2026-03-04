@@ -3,35 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aarif Saifi | Dev Portfolio</title>
+    <title>Aarif Saifi | Professional Portfolio</title>
     <style>
-        :root { --bg: #0f172a; --card: #1e293b; --accent: #38bdf8; --text: #f8fafc; }
-        body { background: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; margin: 0; text-align: center; }
-        nav { padding: 20px; border-bottom: 1px solid rgba(255,255,255,0.1); display: flex; justify-content: space-around; }
-        .hero { padding: 60px 20px; background: radial-gradient(circle at top, #1e293b, #0f172a); }
-        h1 { font-size: 2.5rem; margin: 10px 0; color: var(--accent); }
-        .container { padding: 20px; max-width: 800px; margin: auto; }
-        .tool-card { background: var(--card); border-radius: 20px; padding: 25px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.05); box-shadow: 0 10px 25px rgba(0,0,0,0.3); }
-        .btn { background: var(--accent); color: #000; border: none; padding: 12px 30px; border-radius: 50px; font-weight: bold; cursor: pointer; transition: 0.3s; text-decoration: none; display: inline-block; }
-        .btn:hover { transform: scale(1.05); box-shadow: 0 0 20px rgba(56, 189, 248, 0.4); }
-        .skill-tag { display: inline-block; background: rgba(56, 189, 248, 0.1); color: var(--accent); padding: 5px 15px; border-radius: 20px; font-size: 0.8rem; margin: 5px; }
+        :root { --bg: #0b0e14; --accent: #2f81f7; --text: #adbac7; }
+        body { background: var(--bg); color: var(--text); font-family: sans-serif; margin: 0; text-align: center; }
+        .hero { padding: 80px 20px; background: linear-gradient(180deg, #1c2128, var(--bg)); border-bottom: 1px solid #444; }
+        .avatar { width: 120px; border-radius: 50%; border: 3px solid var(--accent); }
+        h1 { color: #fff; font-size: 2.5rem; margin: 15px 0; }
+        .btn-main { background: var(--accent); color: white; padding: 15px 30px; border-radius: 30px; text-decoration: none; font-weight: bold; display: inline-block; margin-top: 20px; }
     </style>
 </head>
 <body>
-    <nav> <div style="font-weight: bold;">AARIF<span style="color:var(--accent)">.DEV</span></div> </nav>
     <div class="hero">
-        <img src="https://via.placeholder.com/100" style="border-radius: 50%; border: 3px solid var(--accent);">
+        <img src="https://github.com/kinh17631-star.png" class="avatar">
         <h1>Aarif Saifi</h1>
-        <p style="color: #94a3b8;">Cyber Security Enthusiast & Full Stack Scripter</p>
-        <div><span class="skill-tag">Python</span><span class="skill-tag">Bash</span><span class="skill-tag">HTML/CSS</span></div>
-    </div>
-    <div class="container">
-        <h2>Exclusive Tools</h2>
-        <div class="tool-card">
-            <h3>📱 PhoneInfo v2.0</h3>
-            <p style="color: #94a3b8;">Detailed hardware and network analysis tool for Termux/iSH.</p>
-            <button class="btn" onclick="location.href='verify.html'">Get Installation Link</button>
-        </div>
+        <p>Cyber Security Enthusiast & Tool Developer</p>
+        <a href="https://kinh17631-star.github.io/MyToolHub/verify.html" class="btn-main">View My Tools</a>
     </div>
 </body>
 </html>
