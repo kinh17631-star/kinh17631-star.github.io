@@ -3,22 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aarif Saifi | Professional Portfolio</title>
+    <title>Aarif Saifi | Full Stack Developer</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <style>
-        :root { --bg: #0b0e14; --accent: #2f81f7; --text: #adbac7; }
-        body { background: var(--bg); color: var(--text); font-family: sans-serif; margin: 0; text-align: center; }
-        .hero { padding: 80px 20px; background: linear-gradient(180deg, #1c2128, var(--bg)); border-bottom: 1px solid #444; }
-        .avatar { width: 120px; border-radius: 50%; border: 3px solid var(--accent); }
-        h1 { color: #fff; font-size: 2.5rem; margin: 15px 0; }
-        .btn-main { background: var(--accent); color: white; padding: 15px 30px; border-radius: 30px; text-decoration: none; font-weight: bold; display: inline-block; margin-top: 20px; }
+        :root { --bg: #0d1117; --card: #161b22; --accent: #2f81f7; --text: #c9d1d9; }
+        body { background: var(--bg); color: var(--text); font-family: 'Segoe UI', sans-serif; margin: 0; overflow-x: hidden; }
+        
+        /* Smooth Scroll */
+        html { scroll-behavior: smooth; }
+
+        /* Navbar */
+        nav { padding: 20px; position: fixed; width: 100%; top: 0; background: rgba(13, 17, 23, 0.9); z-index: 1000; border-bottom: 1px solid #30363d; }
+        
+        .hero { height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 0 20px; }
+        .avatar { width: 140px; height: 140px; border-radius: 50%; border: 3px solid var(--accent); margin-bottom: 20px; box-shadow: 0 0 30px rgba(47, 129, 247, 0.2); }
+        .name { font-size: 3rem; color: white; margin: 0; font-weight: 800; }
+        .tagline { font-size: 1.2rem; color: #8b949e; margin-top: 10px; }
+
+        .container { max-width: 900px; margin: auto; padding: 80px 20px; }
+        .section-title { font-size: 2rem; color: white; margin-bottom: 40px; text-align: center; }
+
+        /* Cards Layout */
+        .tool-card { background: var(--card); border: 1px solid #30363d; border-radius: 16px; padding: 30px; margin-bottom: 30px; display: flex; align-items: center; justify-content: space-between; transition: 0.3s; }
+        .tool-card:hover { border-color: var(--accent); transform: scale(1.02); }
+        .btn-launch { background: var(--accent); color: white; border: none; padding: 12px 25px; border-radius: 8px; font-weight: bold; cursor: pointer; text-decoration: none; }
+
+        .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 20px; }
+        .skill-item { background: var(--card); padding: 15px; border-radius: 10px; text-align: center; border: 1px solid #30363d; }
+
+        footer { text-align: center; padding: 40px; border-top: 1px solid #30363d; color: #484f58; }
     </style>
 </head>
 <body>
+
+    <nav>
+        <div style="font-weight: bold; font-size: 1.2rem; color: white; margin-left: 20px;">AARIF<span style="color:var(--accent)">.DEV</span></div>
+    </nav>
+
     <div class="hero">
-        <img src="https://github.com/kinh17631-star.png" class="avatar">
-        <h1>Aarif Saifi</h1>
-        <p>Cyber Security Enthusiast & Tool Developer</p>
-        <a href="https://kinh17631-star.github.io/MyToolHub/verify.html" class="btn-main">View My Tools</a>
+        <img src="https://github.com/kinh17631-star.png" class="avatar" data-aos="zoom-in">
+        <h1 class="name" data-aos="fade-up">Aarif Saifi</h1>
+        <p class="tagline" data-aos="fade-up" data-aos-delay="200">Full Stack Web Developer | Cybersecurity Enthusiast</p>
+        <a href="https://github.com/kinh17631-star" class="btn-launch" style="margin-top: 20px; background: #21262d; border: 1px solid #30363d;" data-aos="fade-up" data-aos-delay="400">⭐ Star Me On GitHub</a>
     </div>
+
+    <div class="container">
+        <h2 class="section-title" data-aos="fade-right">My Specialized Tools</h2>
+        
+        <div class="tool-card" data-aos="fade-left">
+            <div style="text-align: left;">
+                <h3 style="color:white; margin:0;">PhoneInfo Pro v2.0</h3>
+                <p style="color:#8b949e; margin: 10px 0;">Advanced hardware and network analysis script.</p>
+            </div>
+            <a href="https://kinh17631-star.github.io/MyToolHub/verify.html" class="btn-launch">Get Commands</a>
+        </div>
+
+        <h2 class="section-title" data-aos="fade-right">Proficiency</h2>
+        <div class="skills-grid">
+            <div class="skill-item" data-aos="flip-left">Python</div>
+            <div class="skill-item" data-aos="flip-left" data-aos-delay="100">HTML/CSS</div>
+            <div class="skill-item" data-aos="flip-left" data-aos-delay="200">Bash Scripting</div>
+            <div class="skill-item" data-aos="flip-left" data-aos-delay="300">Android Dev</div>
+        </div>
+    </div>
+
+    <footer data-aos="fade-up">
+        Made with ❤️ by Aarif Saifi <br> © 2026 Official ToolHub
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 1000, once: true });
+    </script>
 </body>
 </html>
