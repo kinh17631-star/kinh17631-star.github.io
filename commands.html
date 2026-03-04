@@ -1,27 +1,72 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Installation Commands</title>
+    <title>Installation Guide | PhoneInfo Pro</title>
     <style>
-        body { background: #0d1117; color: #c9d1d9; font-family: 'Courier New', monospace; padding: 20px; }
-        .terminal { background: #000; border: 1px solid #30363d; padding: 25px; border-radius: 12px; color: #58a6ff; line-height: 1.6; word-break: break-all; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
-        .copy-btn { background: #2f81f7; color: white; border: none; padding: 15px 30px; border-radius: 8px; margin-top: 30px; cursor: pointer; font-weight: bold; width: 100%; }
+        :root { --bg: #0d1117; --card: #161b22; --accent: #2f81f7; --text: #c9d1d9; --cmd-bg: #000; }
+        body { background: var(--bg); color: var(--text); font-family: 'Segoe UI', Tahoma, sans-serif; padding: 20px; line-height: 1.6; }
+        .container { max-width: 700px; margin: auto; }
+        h2 { color: white; text-align: center; margin-bottom: 30px; }
+        .step-box { background: var(--card); border: 1px solid #30363d; border-radius: 12px; padding: 20px; margin-bottom: 25px; }
+        .step-title { color: white; font-weight: bold; margin-bottom: 10px; display: flex; align-items: center; gap: 10px; }
+        .terminal-code { background: var(--cmd-bg); border: 1px solid #30363d; padding: 15px; border-radius: 8px; color: #58a6ff; font-family: 'Courier New', monospace; font-size: 0.9rem; position: relative; word-break: break-all; }
+        .copy-btn { background: var(--accent); color: white; border: none; padding: 8px 15px; border-radius: 5px; cursor: pointer; font-size: 0.8rem; margin-top: 10px; font-weight: bold; }
+        .badge { font-size: 0.7rem; padding: 2px 8px; border-radius: 10px; text-transform: uppercase; }
+        .termux { background: #2ea04333; color: #3fb950; border: 1px solid #2ea04366; }
+        .ish { background: #f8514933; color: #f85149; border: 1px solid #f8514966; }
     </style>
 </head>
 <body>
-    <h2 style="font-family: sans-serif; color:white;">Terminal Commands:</h2>
-    <div class="terminal" id="cmd">
-        pkg update && pkg upgrade -y && pkg install git -y && git clone https://github.com/kinh17631-star/MyToolHub && cd MyToolHub/phoneinfo && bash phoneinfo.sh
-    </div>
-    <button class="copy-btn" onclick="copy()">Copy to Clipboard</button>
 
-    <script>
-        function copy() {
-            let t = document.getElementById('cmd').innerText;
-            navigator.clipboard.writeText(t);
-            alert("Commands Copied! Paste them in Termux/iSH.");
-        }
-    </script>
+<div class="container">
+    <h2>Official Installation Guide</h2>
+
+    <div class="step-box">
+        <div class="step-title">1. Update your terminal environment</div>
+        
+        <p>For Termux Users <span class="badge termux">Android</span></p>
+        <div class="terminal-code" id="t1">apt update && apt upgrade -y</div>
+        <button class="copy-btn" onclick="copy('t1')">Copy Command</button>
+
+        <p style="margin-top:20px;">For iSH Shell Users <span class="badge ish">iOS</span></p>
+        <div class="terminal-code" id="i1">apk update && apk upgrade</div>
+        <button class="copy-btn" onclick="copy('i1')">Copy Command</button>
+    </div>
+
+    <div class="step-box">
+        <div class="step-title">2. Install Git (Required)</div>
+        <p>Install Git to clone the repository from GitHub.</p>
+        
+        <p>Termux:</p>
+        <div class="terminal-code" id="t2">pkg install git -y</div>
+        <button class="copy-btn" onclick="copy('t2')">Copy Command</button>
+
+        <p style="margin-top:20px;">iSH Shell:</p>
+        <div class="terminal-code" id="i2">apk add git</div>
+        <button class="copy-btn" onclick="copy('i2')">Copy Command</button>
+    </div>
+
+    <div class="step-box">
+        <div class="step-title">3. Clone and Execute PhoneInfo Pro</div>
+        <p>Final command to launch the auditor.</p>
+        <div class="terminal-code" id="final">git clone https://github.com/kinh17631-star/MyToolHub && cd MyToolHub/phoneinfo && bash phoneinfo.sh</div>
+        <button class="copy-btn" onclick="copy('final')" style="width:100%; padding: 15px;">Copy Full Launch Command</button>
+    </div>
+
+    <footer style="text-align: center; color: #484f58; font-size: 0.8rem; margin-top: 50px;">
+        Support: github.com/kinh17631-star
+    </footer>
+</div>
+
+<script>
+    function copy(id) {
+        let text = document.getElementById(id).innerText;
+        navigator.clipboard.writeText(text);
+        alert("Command copied to clipboard!");
+    }
+</script>
+
 </body>
 </html>
