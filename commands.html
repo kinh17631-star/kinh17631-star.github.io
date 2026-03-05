@@ -8,23 +8,22 @@
     
     <style>
         body { font-family: 'Courier New', monospace; background-color: #0d1117; color: #c9d1d9; padding: 20px; overflow-x: hidden; }
-        .container { max-width: 600px; margin: auto; }
-        h1 { text-align: center; color: #58a6ff; margin-bottom: 40px; }
-        h2 { color: #f0883e; border-left: 4px solid #f0883e; padding-left: 10px; margin-top: 50px; }
+        .container { max-width: 650px; margin: auto; }
+        h1 { text-align: center; color: #58a6ff; margin-bottom: 30px; border-bottom: 2px solid #30363d; padding-bottom: 10px; }
+        .platform-header { background: #238636; color: white; padding: 10px; border-radius: 5px; text-align: center; margin: 40px 0 20px 0; font-size: 20px; font-weight: bold; }
         
-        /* Animation Classes */
         .step-box { 
             background: #161b22; border: 1px solid #30363d; padding: 15px; border-radius: 8px; 
-            margin-bottom: 30px; opacity: 0; transition: all 0.8s ease-out;
+            margin-bottom: 25px; opacity: 0; transition: all 0.6s ease-out;
         }
-        .slide-left { transform: translateX(-100px); }
-        .slide-right { transform: translateX(100px); }
+        .slide-left { transform: translateX(-80px); }
+        .slide-right { transform: translateX(80px); }
         .show { opacity: 1; transform: translateX(0); }
 
-        p { color: #8b949e; font-size: 14px; margin-bottom: 5px; font-weight: bold; }
-        code { background: #000; color: #39ff14; padding: 12px; display: block; border-radius: 4px; margin-bottom: 10px; border: 1px solid #333; }
-        .btn { background: #238636; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; font-weight: bold; width: 100%; }
-        .btn:active { transform: scale(0.98); }
+        p { color: #8b949e; font-size: 14px; margin-bottom: 8px; font-weight: bold; text-transform: uppercase; }
+        code { background: #000; color: #39ff14; padding: 12px; display: block; border-radius: 4px; border: 1px solid #333; margin-bottom: 10px; }
+        .btn { background: #21262d; color: #58a6ff; border: 1px solid #30363d; padding: 10px; border-radius: 5px; cursor: pointer; font-weight: bold; width: 100%; transition: 0.3s; }
+        .btn:hover { background: #30363d; border-color: #8b949e; }
     </style>
 </head>
 <body>
@@ -32,64 +31,72 @@
     <div class="container">
         <h1>🚀 MyToolHub Commands</h1>
 
-        <h2>Part 4: IP-Tracer Tool</h2>
+        <div class="platform-header">FOR TERMUX COMMANDS (IP-TRACER)</div>
 
         <div class="step-box slide-left">
-            <p>1. Update and upgrade your terminal</p>
-            <code id="p4s1">pkg update && pkg upgrade -y</code>
-            <button class="btn" onclick="copyIt('#p4s1')">Copy Command</button>
+            <p>1. Update your Termux terminal</p>
+            <code id="t1">pkg update && pkg upgrade -y</code>
+            <button class="btn" onclick="copyIt('#t1')">Copy Step 1</button>
         </div>
 
         <div class="step-box slide-right">
-            <p>2. Install Python language</p>
-            <code id="p4s2">pkg install python -y</code>
-            <button class="btn" onclick="copyIt('#p4s2')">Copy Command</button>
+            <p>2. Install Python in Termux</p>
+            <code id="t2">pkg install python git -y</code>
+            <button class="btn" onclick="copyIt('#t2')">Copy Step 2</button>
         </div>
 
         <div class="step-box slide-left">
-            <p>3. Clone the tool from GitHub</p>
-            <code id="p4s3">git clone https://github.com/kinh17631-star/MyToolHub</code>
-            <button class="btn" onclick="copyIt('#p4s3')">Copy Command</button>
+            <p>3. Clone IP-Tracer tool</p>
+            <code id="t3">git clone https://github.com/kinh17631-star/MyToolHub</code>
+            <button class="btn" onclick="copyIt('#t3')">Copy Step 3</button>
         </div>
 
         <div class="step-box slide-right">
-            <p>4. Go to IP-Tracer directory</p>
-            <code id="p4s4">cd MyToolHub/IP-Tracer</code>
-            <button class="btn" onclick="copyIt('#p4s4')">Copy Command</button>
+            <p>4. Enter Tool Directory</p>
+            <code id="t4">cd MyToolHub/IP-Tracer</code>
+            <button class="btn" onclick="copyIt('#t4')">Copy Step 4</button>
         </div>
 
         <div class="step-box slide-left">
-            <p>5. Run the tool installer and main file</p>
-            <code id="p4s5">python3 install.py && python3 main.py</code>
-            <button class="btn" onclick="copyIt('#p4s5')">Copy Command</button>
+            <p>5. Run Installer & Tool</p>
+            <code id="t5">python3 install.py && python3 main.py</code>
+            <button class="btn" onclick="copyIt('#t5')">Copy Step 5</button>
         </div>
 
-        <hr style="border: 0.5px solid #30363d; margin: 50px 0;">
-
-        <h2>Part 3: PhoneInfo Tool</h2>
+        <div class="platform-header">FOR ISH SHELL COMMANDS (IP-TRACER)</div>
 
         <div class="step-box slide-right">
-            <p>1. Go to PhoneInfo directory</p>
-            <code id="p3s1">cd MyToolHub/PhoneInfo</code>
-            <button class="btn" onclick="copyIt('#p3s1')">Copy Command</button>
+            <p>1. Update iSH Packages</p>
+            <code id="i1">apk update && apk upgrade</code>
+            <button class="btn" onclick="copyIt('#i1')">Copy Step 1</button>
         </div>
 
         <div class="step-box slide-left">
-            <p>2. Run PhoneInfo tool</p>
-            <code id="p3s2">python3 main.py</code>
-            <button class="btn" onclick="copyIt('#p3s2')">Copy Command</button>
+            <p>2. Install Python & Git in iSH</p>
+            <code id="i2">apk add python3 git</code>
+            <button class="btn" onclick="copyIt('#i2')">Copy Step 2</button>
+        </div>
+
+        <div class="step-box slide-right">
+            <p>3. Clone Repository</p>
+            <code id="i3">git clone https://github.com/kinh17631-star/MyToolHub</code>
+            <button class="btn" onclick="copyIt('#i3')">Copy Step 3</button>
+        </div>
+
+        <div class="step-box slide-left">
+            <p>4. Launch IP-Tracer</p>
+            <code id="i4">cd MyToolHub/IP-Tracer && python3 install.py && python3 main.py</code>
+            <button class="btn" onclick="copyIt('#i4')">Copy Step 4</button>
         </div>
 
     </div>
 
     <script>
-        // Copy Function
         function copyIt(id) {
             var t = document.querySelector(id).innerText;
             navigator.clipboard.writeText(t).then(function() { alert("Command Copied!"); });
         }
 
-        // Scroll Animation Logic
         const boxes = document.querySelectorAll('.step-box');
         window.addEventListener('scroll', checkBoxes);
         checkBoxes();
@@ -98,11 +105,7 @@
             const triggerBottom = window.innerHeight / 5 * 4;
             boxes.forEach(box => {
                 const boxTop = box.getBoundingClientRect().top;
-                if(boxTop < triggerBottom) {
-                    box.classList.add('show');
-                } else {
-                    box.classList.remove('show');
-                }
+                if(boxTop < triggerBottom) { box.classList.add('show'); }
             });
         }
     </script>
