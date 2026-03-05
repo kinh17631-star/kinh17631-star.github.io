@@ -3,43 +3,107 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Get Commands - MyToolHub</title>
+    <title>MyToolHub - Official Commands</title>
     <script src="https://pl28842396.effectivegatecpm.com/78/66/06/7866062a1a9ed246b50285d5b3aeeff3.js"></script>
+    
     <style>
-        body { font-family: 'Courier New', monospace; background-color: #0d1117; color: #c9d1d9; padding: 20px; }
-        .step-box { background: #161b22; border: 1px solid #30363d; padding: 15px; border-radius: 8px; margin-bottom: 20px; text-align: center; }
-        code { background: #000; color: #39ff14; padding: 10px; display: block; border-radius: 4px; margin-bottom: 10px; }
-        .btn { background: #238636; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; font-weight: bold; }
+        body { font-family: 'Courier New', monospace; background-color: #0d1117; color: #c9d1d9; padding: 20px; overflow-x: hidden; }
+        .container { max-width: 600px; margin: auto; }
+        h1 { text-align: center; color: #58a6ff; margin-bottom: 40px; }
+        h2 { color: #f0883e; border-left: 4px solid #f0883e; padding-left: 10px; margin-top: 50px; }
+        
+        /* Animation Classes */
+        .step-box { 
+            background: #161b22; border: 1px solid #30363d; padding: 15px; border-radius: 8px; 
+            margin-bottom: 30px; opacity: 0; transition: all 0.8s ease-out;
+        }
+        .slide-left { transform: translateX(-100px); }
+        .slide-right { transform: translateX(100px); }
+        .show { opacity: 1; transform: translateX(0); }
+
+        p { color: #8b949e; font-size: 14px; margin-bottom: 5px; font-weight: bold; }
+        code { background: #000; color: #39ff14; padding: 12px; display: block; border-radius: 4px; margin-bottom: 10px; border: 1px solid #333; }
+        .btn { background: #238636; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; font-weight: bold; width: 100%; }
+        .btn:active { transform: scale(0.98); }
     </style>
 </head>
 <body>
-    <div style="max-width: 600px; margin: auto;">
-        <h2 style="text-align: center; color: #58a6ff;">Part 4: IP-Tracer Setup</h2>
-        
-        <div class="step-box">
-            <code id="s1">pkg install python -y</code>
-            <button class="btn" onclick="copyIt('#s1')">Copy Step 1</button>
+
+    <div class="container">
+        <h1>🚀 MyToolHub Commands</h1>
+
+        <h2>Part 4: IP-Tracer Tool</h2>
+
+        <div class="step-box slide-left">
+            <p>1. Update and upgrade your terminal</p>
+            <code id="p4s1">pkg update && pkg upgrade -y</code>
+            <button class="btn" onclick="copyIt('#p4s1')">Copy Command</button>
         </div>
 
-        <div class="step-box">
-            <code id="s2">git clone https://github.com/kinh17631-star/MyToolHub</code>
-            <button class="btn" onclick="copyIt('#s2')">Copy Step 2</button>
+        <div class="step-box slide-right">
+            <p>2. Install Python language</p>
+            <code id="p4s2">pkg install python -y</code>
+            <button class="btn" onclick="copyIt('#p4s2')">Copy Command</button>
         </div>
 
-        <div class="step-box">
-            <code id="s3">cd MyToolHub/IP-Tracer</code>
-            <button class="btn" onclick="copyIt('#s3')">Copy Step 3</button>
+        <div class="step-box slide-left">
+            <p>3. Clone the tool from GitHub</p>
+            <code id="p4s3">git clone https://github.com/kinh17631-star/MyToolHub</code>
+            <button class="btn" onclick="copyIt('#p4s3')">Copy Command</button>
         </div>
 
-        <div class="step-box">
-            <code id="s4">python3 install.py && python3 main.py</code>
-            <button class="btn" onclick="copyIt('#s4')">Copy Step 4</button>
+        <div class="step-box slide-right">
+            <p>4. Go to IP-Tracer directory</p>
+            <code id="p4s4">cd MyToolHub/IP-Tracer</code>
+            <button class="btn" onclick="copyIt('#p4s4')">Copy Command</button>
         </div>
+
+        <div class="step-box slide-left">
+            <p>5. Run the tool installer and main file</p>
+            <code id="p4s5">python3 install.py && python3 main.py</code>
+            <button class="btn" onclick="copyIt('#p4s5')">Copy Command</button>
+        </div>
+
+        <hr style="border: 0.5px solid #30363d; margin: 50px 0;">
+
+        <h2>Part 3: PhoneInfo Tool</h2>
+
+        <div class="step-box slide-right">
+            <p>1. Go to PhoneInfo directory</p>
+            <code id="p3s1">cd MyToolHub/PhoneInfo</code>
+            <button class="btn" onclick="copyIt('#p3s1')">Copy Command</button>
+        </div>
+
+        <div class="step-box slide-left">
+            <p>2. Run PhoneInfo tool</p>
+            <code id="p3s2">python3 main.py</code>
+            <button class="btn" onclick="copyIt('#p3s2')">Copy Command</button>
+        </div>
+
     </div>
+
     <script>
+        // Copy Function
         function copyIt(id) {
             var t = document.querySelector(id).innerText;
             navigator.clipboard.writeText(t).then(function() { alert("Command Copied!"); });
+        }
+
+        // Scroll Animation Logic
+        const boxes = document.querySelectorAll('.step-box');
+        window.addEventListener('scroll', checkBoxes);
+        checkBoxes();
+
+        function checkBoxes() {
+            const triggerBottom = window.innerHeight / 5 * 4;
+            boxes.forEach(box => {
+                const boxTop = box.getBoundingClientRect().top;
+                if(boxTop < triggerBottom) {
+                    box.classList.add('show');
+                } else {
+                    box.classList.remove('show');
+                }
+            });
         }
     </script>
 </body>
