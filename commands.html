@@ -3,57 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MyToolHub - Official Commands</title>
+    <title>Get Commands - MyToolHub</title>
+    <script src="https://pl28842396.effectivegatecpm.com/78/66/06/7866062a1a9ed246b50285d5b3aeeff3.js"></script>
     <style>
         body { font-family: 'Courier New', monospace; background-color: #0d1117; color: #c9d1d9; padding: 20px; }
-        .container { max-width: 800px; margin: auto; }
-        .command-box { background: #161b22; border: 1px solid #30363d; border-radius: 6px; padding: 15px; margin-bottom: 20px; }
-        h3 { color: #238636; }
-        code { background: #000; color: #39ff14; padding: 12px; display: block; border-radius: 4px; border: 1px solid #333; margin: 10px 0; }
-        .copy-btn { background-color: #238636; color: white; border: none; padding: 10px 20px; border-radius: 4px; cursor: pointer; font-weight: bold; }
+        .step-box { background: #161b22; border: 1px solid #30363d; padding: 15px; border-radius: 8px; margin-bottom: 20px; text-align: center; }
+        code { background: #000; color: #39ff14; padding: 10px; display: block; border-radius: 4px; margin-bottom: 10px; }
+        .btn { background: #238636; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; font-weight: bold; }
     </style>
 </head>
 <body>
-    <script src="https://pl28842396.effectivegatecpm.com/78/66/06/7866062a1a9ed246b50285d5b3aeeff3.js"></script>
-
-    <div class="container">
-        <h1>🛠️ Part 4: IP-Tracer Commands</h1>
+    <div style="max-width: 600px; margin: auto;">
+        <h2 style="text-align: center; color: #58a6ff;">Part 4: IP-Tracer Setup</h2>
         
-        <div class="command-box">
-            <h3>Step 1: Install Python</h3>
-            <code id="c1">pkg install python -y</code>
-            <button class="copy-btn" onclick="copyText('#c1')">Copy Step 1</button>
+        <div class="step-box">
+            <code id="s1">pkg install python -y</code>
+            <button class="btn" onclick="copyIt('#s1')">Copy Step 1</button>
         </div>
 
-        <div class="command-box">
-            <h3>Step 2: Clone Repository</h3>
-            <code id="c2">git clone https://github.com/kinh17631-star/MyToolHub</code>
-            <button class="copy-btn" onclick="copyText('#c2')">Copy Step 2</button>
+        <div class="step-box">
+            <code id="s2">git clone https://github.com/kinh17631-star/MyToolHub</code>
+            <button class="btn" onclick="copyIt('#s2')">Copy Step 2</button>
         </div>
 
-        <div class="command-box">
-            <h3>Step 3: Enter Directory</h3>
-            <code id="c3">cd MyToolHub/IP-Tracer</code>
-            <button class="copy-btn" onclick="copyText('#c3')">Copy Step 3</button>
+        <div class="step-box">
+            <code id="s3">cd MyToolHub/IP-Tracer</code>
+            <button class="btn" onclick="copyIt('#s3')">Copy Step 3</button>
         </div>
 
-        <div class="command-box">
-            <h3>Step 4: Run Installer</h3>
-            <code id="c4">python3 install.py</code>
-            <button class="copy-btn" onclick="copyText('#c4')">Copy Step 4</button>
-        </div>
-
-        <div class="command-box">
-            <h3>Step 5: Run Tool</h3>
-            <code id="c5">python3 main.py</code>
-            <button class="copy-btn" onclick="copyText('#c5')">Copy Step 5</button>
+        <div class="step-box">
+            <code id="s4">python3 install.py && python3 main.py</code>
+            <button class="btn" onclick="copyIt('#s4')">Copy Step 4</button>
         </div>
     </div>
-
     <script>
-        function copyText(elementId) {
-            var text = document.querySelector(elementId).innerText;
-            navigator.clipboard.writeText(text).then(function() { alert("Copied!"); });
+        function copyIt(id) {
+            var t = document.querySelector(id).innerText;
+            navigator.clipboard.writeText(t).then(function() { alert("Command Copied!"); });
         }
     </script>
 </body>
