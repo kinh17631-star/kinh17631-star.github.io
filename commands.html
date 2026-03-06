@@ -22,20 +22,33 @@
 <body>
 
     <div class="container">
-        <h1>🚀 MyToolHub Commands</h1>
+        <h1>🚀 MyToolHub Official Commands</h1>
 
-        <div class="platform-header">FOR TERMUX COMMANDS</div>
-
+        <div class="platform-header">PART 1: IP-TRACER (ANY DEVICE)</div>
         <div class="step-box">
-            <p>1. Update & Upgrade Terminal</p>
-            <code id="t1">pkg update && pkg upgrade -y</code>
-            <button class="btn" onclick="copyIt('#t1')">Copy Step 1</button>
+            <p>1. Install IP-Tracer</p>
+            <code id="c1">git clone https://github.com/kinh17631-star/MyToolHub && cd MyToolHub/IP-Tracer && python3 install.py</code>
+            <button class="btn" onclick="copyIt('#c1')">Copy Commands</button>
+        </div>
+
+        <div class="ad-slot">
+            <script type="text/javascript">
+                atOptions = { 'key' : 'bd26ab7f8b0a23df1395ce040f31db29', 'format' : 'iframe', 'height' : 250, 'width' : 300, 'params' : {} };
+            </script>
+            <script type="text/javascript" src="https://www.highperformanceformat.com/bd26ab7f8b0a23df1395ce040f31db29/invoke.js"></script>
+        </div>
+
+        <div class="platform-header" style="background: #d73a49;">PART 5: CAM-WATCH (iOS SPECIAL)</div>
+        <div class="step-box">
+            <p>1. Update iSH Packages</p>
+            <code id="cw1">apk update && apk add python3 git</code>
+            <button class="btn" onclick="copyIt('#cw1')">Copy Step 1</button>
         </div>
 
         <div class="step-box">
-            <p>2. Install Python & Git</p>
-            <code id="t2">pkg install python git -y</code>
-            <button class="btn" onclick="copyIt('#t2')">Copy Step 2</button>
+            <p>2. Download Cam-Watch Folder</p>
+            <code id="cw2">git clone https://github.com/kinh17631-star/CamWatch && cd CamWatch</code>
+            <button class="btn" onclick="copyIt('#cw2')">Copy Step 2</button>
         </div>
 
         <div class="ad-slot">
@@ -46,43 +59,19 @@
         </div>
 
         <div class="step-box">
-            <p>3. Clone IP-Tracer tool</p>
-            <code id="t3">git clone https://github.com/kinh17631-star/MyToolHub</code>
-            <button class="btn" onclick="copyIt('#t3')">Copy Step 3</button>
+            <p>3. Install Requirements & Run</p>
+            <code id="cw3">pip install -r requirements.txt && python3 CamWatch.py</code>
+            <button class="btn" onclick="copyIt('#cw3')">Copy Step 3</button>
         </div>
 
-        <div class="step-box">
-            <p>4. Enter Tool Directory</p>
-            <code id="t4">cd MyToolHub/IP-Tracer</code>
-            <button class="btn" onclick="copyIt('#t4')">Copy Step 4</button>
-        </div>
-
-        <div class="ad-slot">
-            <script type="text/javascript">
-                atOptions = { 'key' : 'bd26ab7f8b0a23df1395ce040f31db29', 'format' : 'iframe', 'height' : 250, 'width' : 300, 'params' : {} };
-            </script>
-            <script type="text/javascript" src="https://www.highperformanceformat.com/bd26ab7f8b0a23df1395ce040f31db29/invoke.js"></script>
-        </div>
-
-        <div class="step-box">
-            <p>5. Start Tool</p>
-            <code id="t5">python3 install.py && python3 main.py</code>
-            <button class="btn" onclick="copyIt('#t5')">Copy Step 5</button>
-        </div>
-
-        <div class="platform-header">FOR ISH SHELL</div>
-
-        <div class="step-box">
-            <p>1. Run All-in-One Command</p>
-            <code id="i1">apk update && apk add python3 git && git clone https://github.com/kinh17631-star/MyToolHub && cd MyToolHub/IP-Tracer && python3 install.py && python3 main.py</code>
-            <button class="btn" onclick="copyIt('#i1')">Copy for iSH</button>
-        </div>
     </div>
 
     <script>
         function copyIt(id) {
             var t = document.querySelector(id).innerText;
-            navigator.clipboard.writeText(t).then(function() { alert("Command Copied!"); });
+            navigator.clipboard.writeText(t).then(function() { 
+                alert("Command Copied! Use it in iSH/Termux."); 
+            });
         }
     </script>
 </body>
