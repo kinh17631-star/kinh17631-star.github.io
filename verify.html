@@ -1,27 +1,22 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Secure Verification</title>
+    <title>Verify - MyToolHub</title>
     <style>
-        body { background: #0d1117; color: #c9d1d9; font-family: sans-serif; text-align: center; padding: 20px; display: flex; flex-direction: column; justify-content: center; height: 90vh; }
-        #timer { font-size: 100px; color: #2f81f7; font-weight: bold; margin: 30px 0; }
-        .btn-next { display: none; background: #238636; color: white; padding: 18px 50px; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 1.2rem; }
+        body { font-family: 'Courier New', monospace; background-color: #0d1117; color: #c9d1d9; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; }
+        .box { text-align: center; border: 1px solid #30363d; padding: 40px; border-radius: 10px; background: #161b22; }
+        .btn { background-color: #f0883e; color: white; padding: 12px 24px; text-decoration: none; border-radius: 5px; font-weight: bold; display: inline-block; cursor: pointer; }
     </style>
 </head>
 <body>
-    <h3>Generating Your Secure Link...</h3>
-    <div id="timer">10</div>
-    <a href="commands.html" id="btn-next" class="btn-next">CONTINUE TO COMMANDS</a>
-
-    <script>
-        let t = 10;
-        let x = setInterval(() => {
-            t--; document.getElementById('timer').innerText = t;
-            if(t <= 0) { clearInterval(x); document.getElementById('timer').style.display = 'none'; document.getElementById('btn-next').style.display = 'inline-block'; }
-        }, 1000);
-    </script>
-
     <script src="https://pl28842396.effectivegatecpm.com/78/66/06/7866062a1a9ed246b50285d5b3aeeff3.js"></script>
+
+    <div class="box">
+        <h2>Verification Required</h2>
+        <p>Click below to verify and get your commands.</p>
+        <a href="commands.html" class="btn">Verify & Continue</a>
+    </div>
 </body>
 </html>
