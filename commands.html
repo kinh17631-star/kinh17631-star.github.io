@@ -3,32 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Commands - MyToolHub</title>
+    <title>MyToolHub - Official Commands</title>
     
     <script src="https://pl28842396.effectivegatecpm.com/78/66/06/7866062a1a9ed246b50285d5b3aeeff3.js"></script>
     
     <style>
-        body { font-family: 'Courier New', monospace; background-color: #0d1117; color: #c9d1d9; padding: 20px; }
+        body { font-family: 'Courier New', monospace; background-color: #0d1117; color: #c9d1d9; padding: 20px; overflow-x: hidden; }
         .container { max-width: 650px; margin: auto; }
-        h1 { text-align: center; color: #58a6ff; border-bottom: 2px solid #30363d; padding-bottom: 10px; }
-        .platform-header { background: #238636; color: white; padding: 10px; border-radius: 5px; text-align: center; margin: 30px 0 15px 0; font-size: 18px; font-weight: bold; }
-        .step-box { background: #161b22; border: 1px solid #30363d; padding: 15px; border-radius: 8px; margin-bottom: 20px; }
-        p { color: #8b949e; font-size: 14px; margin-bottom: 5px; font-weight: bold; }
+        h1 { text-align: center; color: #58a6ff; margin-bottom: 30px; border-bottom: 2px solid #30363d; padding-bottom: 10px; }
+        .platform-header { background: #238636; color: white; padding: 10px; border-radius: 5px; text-align: center; margin: 40px 0 20px 0; font-size: 20px; font-weight: bold; }
+        .tool-name { color: #f0883e; font-size: 18px; margin-top: 30px; border-left: 4px solid #f0883e; padding-left: 10px; font-weight: bold; }
+        
+        .step-box { background: #161b22; border: 1px solid #30363d; padding: 15px; border-radius: 8px; margin-bottom: 25px; opacity: 0; transition: all 0.6s ease-out; }
+        .slide-left { transform: translateX(-80px); }
+        .slide-right { transform: translateX(80px); }
+        .show { opacity: 1; transform: translateX(0); }
+
+        p { color: #8b949e; font-size: 14px; margin-bottom: 8px; font-weight: bold; text-transform: uppercase; }
         code { background: #000; color: #39ff14; padding: 12px; display: block; border-radius: 4px; border: 1px solid #333; margin-bottom: 10px; overflow-x: auto; }
-        .btn { background: #21262d; color: #58a6ff; border: 1px solid #30363d; padding: 10px; border-radius: 5px; cursor: pointer; font-weight: bold; width: 100%; }
+        .btn { background: #21262d; color: #58a6ff; border: 1px solid #30363d; padding: 10px; border-radius: 5px; cursor: pointer; font-weight: bold; width: 100%; transition: 0.3s; }
+        .btn:hover { background: #30363d; border-color: #8b949e; }
         .ad-slot { text-align: center; margin: 25px 0; min-height: 250px; }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <h1>🚀 MyToolHub Official Commands</h1>
+        <h1>🚀 MyToolHub Commands</h1>
 
-        <div class="platform-header">PART 1: IP-TRACER (ANY DEVICE)</div>
-        <div class="step-box">
-            <p>1. Install IP-Tracer</p>
-            <code id="c1">git clone https://github.com/kinh17631-star/MyToolHub && cd MyToolHub/IP-Tracer && python3 install.py</code>
-            <button class="btn" onclick="copyIt('#c1')">Copy Commands</button>
+        <div class="ad-slot">
+            <script type="text/javascript">
+                atOptions = { 'key' : 'bd26ab7f8b0a23df1395ce040f31db29', 'format' : 'iframe', 'height' : 250, 'width' : 300, 'params' : {} };
+            </script>
+            <script type="text/javascript" src="https://www.highperformanceformat.com/bd26ab7f8b0a23df1395ce040f31db29/invoke.js"></script>
+        </div>
+
+        <div class="platform-header">FOR TERMUX USERS</div>
+
+        <div class="tool-name">1. IP-TRACER</div>
+        <div class="step-box slide-left">
+            <p>Step 1: Install Tool</p>
+            <code id="t1">git clone https://github.com/kinh17631-star/MyToolHub</code>
+            <button class="btn" onclick="copyIt('#t1')">Copy Command</button>
+        </div>
+        <div class="step-box slide-right">
+            <p>Step 2: Run Tool</p>
+            <code id="t2">cd MyToolHub/IP-Tracer && python3 install.py</code>
+            <button class="btn" onclick="copyIt('#t2')">Copy Command</button>
+        </div>
+
+        <div class="tool-name">2. PHONEINFO</div>
+        <div class="step-box slide-left">
+            <p>Run PhoneInfo</p>
+            <code id="t3">cd MyToolHub/PhoneInfo && python3 main.py</code>
+            <button class="btn" onclick="copyIt('#t3')">Copy Command</button>
         </div>
 
         <div class="ad-slot">
@@ -38,30 +66,34 @@
             <script type="text/javascript" src="https://www.highperformanceformat.com/bd26ab7f8b0a23df1395ce040f31db29/invoke.js"></script>
         </div>
 
-        <div class="platform-header" style="background: #d73a49;">PART 5: CAM-WATCH (iOS SPECIAL)</div>
-        <div class="step-box">
-            <p>1. Update iSH Packages</p>
-            <code id="cw1">apk update && apk add python3 git</code>
-            <button class="btn" onclick="copyIt('#cw1')">Copy Step 1</button>
+        <div class="tool-name">3. CAMWATCH (Termux)</div>
+        <div class="step-box slide-right">
+            <p>Download & Start</p>
+            <code id="t4">git clone https://github.com/kinh17631-star/CamWatch && cd CamWatch && python3 CamWatch.py</code>
+            <button class="btn" onclick="copyIt('#t4')">Copy Command</button>
         </div>
 
-        <div class="step-box">
-            <p>2. Download Cam-Watch Folder</p>
-            <code id="cw2">git clone https://github.com/kinh17631-star/CamWatch && cd CamWatch</code>
-            <button class="btn" onclick="copyIt('#cw2')">Copy Step 2</button>
+        <hr style="border: 1px solid #30363d; margin: 50px 0;">
+
+        <div class="platform-header" style="background: #005fb8;">FOR iSH SHELL (iOS)</div>
+
+        <div class="tool-name">1. IP-TRACER (iSH)</div>
+        <div class="step-box slide-left">
+            <p>Step 1: Dependencies</p>
+            <code id="i1">apk update && apk add python3 git</code>
+            <button class="btn" onclick="copyIt('#i1')">Copy Command</button>
+        </div>
+        <div class="step-box slide-right">
+            <p>Step 2: Installation</p>
+            <code id="i2">git clone https://github.com/kinh17631-star/MyToolHub && cd MyToolHub/IP-Tracer && python3 install.py</code>
+            <button class="btn" onclick="copyIt('#i2')">Copy Command</button>
         </div>
 
-        <div class="ad-slot">
-            <script type="text/javascript">
-                atOptions = { 'key' : 'bd26ab7f8b0a23df1395ce040f31db29', 'format' : 'iframe', 'height' : 250, 'width' : 300, 'params' : {} };
-            </script>
-            <script type="text/javascript" src="https://www.highperformanceformat.com/bd26ab7f8b0a23df1395ce040f31db29/invoke.js"></script>
-        </div>
-
-        <div class="step-box">
-            <p>3. Install Requirements & Run</p>
-            <code id="cw3">pip install -r requirements.txt && python3 CamWatch.py</code>
-            <button class="btn" onclick="copyIt('#cw3')">Copy Step 3</button>
+        <div class="tool-name">2. CAMWATCH (iOS Special)</div>
+        <div class="step-box slide-left">
+            <p>Run on iSH</p>
+            <code id="i3">git clone https://github.com/kinh17631-star/CamWatch && cd CamWatch && pip install -r requirements.txt && python3 CamWatch.py</code>
+            <button class="btn" onclick="copyIt('#i3')">Copy Command</button>
         </div>
 
     </div>
@@ -69,8 +101,18 @@
     <script>
         function copyIt(id) {
             var t = document.querySelector(id).innerText;
-            navigator.clipboard.writeText(t).then(function() { 
-                alert("Command Copied! Use it in iSH/Termux."); 
+            navigator.clipboard.writeText(t).then(function() { alert("Command Copied!"); });
+        }
+
+        const boxes = document.querySelectorAll('.step-box');
+        window.addEventListener('scroll', checkBoxes);
+        checkBoxes();
+
+        function checkBoxes() {
+            const triggerBottom = window.innerHeight / 5 * 4;
+            boxes.forEach(box => {
+                const boxTop = box.getBoundingClientRect().top;
+                if(boxTop < triggerBottom) { box.classList.add('show'); }
             });
         }
     </script>
