@@ -3,23 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MyToolHub - Official Commands</title>
+    <title>Commands - MyToolHub</title>
     
     <script src="https://pl28842396.effectivegatecpm.com/78/66/06/7866062a1a9ed246b50285d5b3aeeff3.js"></script>
     
     <style>
-        body { font-family: 'Courier New', monospace; background-color: #0d1117; color: #c9d1d9; padding: 20px; overflow-x: hidden; }
+        body { font-family: 'Courier New', monospace; background-color: #0d1117; color: #c9d1d9; padding: 20px; }
         .container { max-width: 650px; margin: auto; }
-        h1 { text-align: center; color: #58a6ff; margin-bottom: 30px; border-bottom: 2px solid #30363d; padding-bottom: 10px; }
-        .platform-header { background: #238636; color: white; padding: 10px; border-radius: 5px; text-align: center; margin: 40px 0 20px 0; font-size: 20px; font-weight: bold; }
-        .step-box { background: #161b22; border: 1px solid #30363d; padding: 15px; border-radius: 8px; margin-bottom: 25px; opacity: 0; transition: all 0.6s ease-out; }
-        .slide-left { transform: translateX(-80px); }
-        .slide-right { transform: translateX(80px); }
-        .show { opacity: 1; transform: translateX(0); }
-        p { color: #8b949e; font-size: 14px; margin-bottom: 8px; font-weight: bold; text-transform: uppercase; }
-        code { background: #000; color: #39ff14; padding: 12px; display: block; border-radius: 4px; border: 1px solid #333; margin-bottom: 10px; }
+        h1 { text-align: center; color: #58a6ff; border-bottom: 2px solid #30363d; padding-bottom: 10px; }
+        .platform-header { background: #238636; color: white; padding: 10px; border-radius: 5px; text-align: center; margin: 30px 0 15px 0; font-size: 18px; font-weight: bold; }
+        .step-box { background: #161b22; border: 1px solid #30363d; padding: 15px; border-radius: 8px; margin-bottom: 20px; }
+        p { color: #8b949e; font-size: 14px; margin-bottom: 5px; font-weight: bold; }
+        code { background: #000; color: #39ff14; padding: 12px; display: block; border-radius: 4px; border: 1px solid #333; margin-bottom: 10px; overflow-x: auto; }
         .btn { background: #21262d; color: #58a6ff; border: 1px solid #30363d; padding: 10px; border-radius: 5px; cursor: pointer; font-weight: bold; width: 100%; }
-        .ad-slot { text-align: center; margin: 25px 0; min-height: 250px; border: 1px dashed #333; padding: 10px; border-radius: 8px; }
+        .ad-slot { text-align: center; margin: 25px 0; min-height: 250px; }
     </style>
 </head>
 <body>
@@ -29,76 +26,63 @@
 
         <div class="platform-header">FOR TERMUX COMMANDS</div>
 
-        <div class="step-box slide-left">
-            <p>1. Update your Termux terminal</p>
+        <div class="step-box">
+            <p>1. Update & Upgrade Terminal</p>
             <code id="t1">pkg update && pkg upgrade -y</code>
             <button class="btn" onclick="copyIt('#t1')">Copy Step 1</button>
         </div>
 
-        <div class="step-box slide-right">
-            <p>2. Install Python in Termux</p>
+        <div class="step-box">
+            <p>2. Install Python & Git</p>
             <code id="t2">pkg install python git -y</code>
             <button class="btn" onclick="copyIt('#t2')">Copy Step 2</button>
         </div>
 
         <div class="ad-slot">
-            <p style="font-size: 10px; color: #444;">ADVERTISEMENT</p>
             <script type="text/javascript">
                 atOptions = { 'key' : 'bd26ab7f8b0a23df1395ce040f31db29', 'format' : 'iframe', 'height' : 250, 'width' : 300, 'params' : {} };
             </script>
             <script type="text/javascript" src="https://www.highperformanceformat.com/bd26ab7f8b0a23df1395ce040f31db29/invoke.js"></script>
         </div>
 
-        <div class="step-box slide-left">
+        <div class="step-box">
             <p>3. Clone IP-Tracer tool</p>
             <code id="t3">git clone https://github.com/kinh17631-star/MyToolHub</code>
             <button class="btn" onclick="copyIt('#t3')">Copy Step 3</button>
         </div>
 
-        <div class="step-box slide-right">
+        <div class="step-box">
             <p>4. Enter Tool Directory</p>
             <code id="t4">cd MyToolHub/IP-Tracer</code>
             <button class="btn" onclick="copyIt('#t4')">Copy Step 4</button>
         </div>
 
         <div class="ad-slot">
-            <p style="font-size: 10px; color: #444;">ADVERTISEMENT</p>
             <script type="text/javascript">
                 atOptions = { 'key' : 'bd26ab7f8b0a23df1395ce040f31db29', 'format' : 'iframe', 'height' : 250, 'width' : 300, 'params' : {} };
             </script>
             <script type="text/javascript" src="https://www.highperformanceformat.com/bd26ab7f8b0a23df1395ce040f31db29/invoke.js"></script>
         </div>
 
-        <div class="step-box slide-left">
-            <p>5. Run Installer & Tool</p>
+        <div class="step-box">
+            <p>5. Start Tool</p>
             <code id="t5">python3 install.py && python3 main.py</code>
             <button class="btn" onclick="copyIt('#t5')">Copy Step 5</button>
         </div>
 
         <div class="platform-header">FOR ISH SHELL</div>
 
-        <div class="step-box slide-right">
-            <p>1. Update iSH & Install Tool</p>
+        <div class="step-box">
+            <p>1. Run All-in-One Command</p>
             <code id="i1">apk update && apk add python3 git && git clone https://github.com/kinh17631-star/MyToolHub && cd MyToolHub/IP-Tracer && python3 install.py && python3 main.py</code>
-            <button class="btn" onclick="copyIt('#i1')">Copy All-in-One iSH</button>
+            <button class="btn" onclick="copyIt('#i1')">Copy for iSH</button>
         </div>
-
     </div>
 
     <script>
         function copyIt(id) {
             var t = document.querySelector(id).innerText;
             navigator.clipboard.writeText(t).then(function() { alert("Command Copied!"); });
-        }
-        const boxes = document.querySelectorAll('.step-box');
-        window.addEventListener('scroll', checkBoxes);
-        checkBoxes();
-        function checkBoxes() {
-            const triggerBottom = window.innerHeight / 5 * 4;
-            boxes.forEach(box => {
-                const boxTop = box.getBoundingClientRect().top;
-                if(boxTop < triggerBottom) { box.classList.add('show'); }
-            });
         }
     </script>
 </body>
