@@ -17,10 +17,8 @@
         .platform-header { background: #238636; color: white; padding: 10px; border-radius: 5px; text-align: center; margin: 40px 0 20px 0; font-size: 20px; font-weight: bold; }
         .tool-name { color: #f0883e; font-size: 18px; margin-top: 35px; border-left: 4px solid #f0883e; padding-left: 10px; font-weight: bold; text-transform: uppercase; }
         
-        .step-box { background: #161b22; border: 1px solid #30363d; padding: 15px; border-radius: 8px; margin-bottom: 20px; opacity: 0; transition: all 0.6s ease-out; }
-        .slide-left { transform: translateX(-80px); }
-        .slide-right { transform: translateX(80px); }
-        .show { opacity: 1; transform: translateX(0); }
+        /* Command Boxes Stacked as requested */
+        .step-box { background: #161b22; border: 1px solid #30363d; padding: 15px; border-radius: 8px; margin-bottom: 10px; opacity: 1; }
 
         p { color: #8b949e; font-size: 13px; margin-bottom: 8px; font-weight: bold; }
         code { background: #000; color: #39ff14; padding: 12px; display: block; border-radius: 4px; border: 1px solid #333; margin-bottom: 10px; overflow-x: auto; }
@@ -33,47 +31,30 @@
 
     <div class="container">
         <div class="warning-text">
-            ⚠️ WARNING: Any misuse of these tools is strictly prohibited. The developer is not responsible for any illegal actions or damage caused by these scripts. Use at your own risk.
+            ⚠️ WARNING: Any misuse of these tools is strictly prohibited. The developer is not responsible for any illegal actions. Use at your own risk.
         </div>
 
         <h1>🚀 MyToolHub Commands</h1>
 
-        <div class="ad-slot">
-            <script type="text/javascript">
-                atOptions = { 'key' : 'bd26ab7f8b0a23df1395ce040f31db29', 'format' : 'iframe', 'height' : 250, 'width' : 300, 'params' : {} };
-            </script>
-            <script type="text/javascript" src="https://www.highperformanceformat.com/bd26ab7f8b0a23df1395ce040f31db29/invoke.js"></script>
-        </div>
-
         <div class="platform-header" style="background: #e91e63;">NEW: 30 DAYS 30 TRICKS (PART 4)</div>
         <div class="tool-name">1. PHONE-CLONER (OFFICIAL)</div>
         
-        <div class="step-box slide-left">
-            <p>Step 1: Clone Official Repo</p>
+        <div class="step-box">
+            <p>Step 1: Clone Tool</p>
             <code id="pc1">git clone https://github.com/kinh17631-star/Phone-Cloner</code>
             <button class="btn" onclick="copyIt('#pc1')">Copy Command</button>
         </div>
-
-        <div class="step-box slide-right">
+        <div class="step-box">
             <p>Step 2: Enter Directory</p>
             <code id="pc2">cd Phone-Cloner</code>
             <button class="btn" onclick="copyIt('#pc2')">Copy Command</button>
         </div>
-
-        <div class="ad-slot">
-            <script type="text/javascript">
-                atOptions = { 'key' : 'bd26ab7f8b0a23df1395ce040f31db29', 'format' : 'iframe', 'height' : 250, 'width' : 300, 'params' : {} };
-            </script>
-            <script type="text/javascript" src="https://www.highperformanceformat.com/bd26ab7f8b0a23df1395ce040f31db29/invoke.js"></script>
-        </div>
-
-        <div class="step-box slide-left">
+        <div class="step-box">
             <p>Step 3: Install Dependencies</p>
             <code id="pc3">bash install.sh</code>
             <button class="btn" onclick="copyIt('#pc3')">Copy Command</button>
         </div>
-
-        <div class="step-box slide-right">
+        <div class="step-box">
             <p>Step 4: Run Real Tool</p>
             <code id="pc4">python3 clone.py</code>
             <button class="btn" onclick="copyIt('#pc4')">Copy Command</button>
@@ -89,81 +70,46 @@
         <div class="platform-header">FOR TERMUX USERS</div>
 
         <div class="tool-name">2. IP-TRACER</div>
-        <div class="step-box slide-left">
-            <p>Step 1: Clone Tool</p>
-            <code id="t_ip1">git clone https://github.com/kinh17631-star/MyToolHub</code>
-            <button class="btn" onclick="copyIt('#t_ip1')">Copy Command</button>
-        </div>
-        <div class="step-box slide-right">
-            <p>Step 2: Enter Directory</p>
-            <code id="t_ip2">cd MyToolHub/IP-Tracer</code>
-            <button class="btn" onclick="copyIt('#t_ip2')">Copy Command</button>
-        </div>
-        <div class="step-box slide-left">
-            <p>Step 3: Run Installer</p>
-            <code id="t_ip3">python3 install.py</code>
-            <button class="btn" onclick="copyIt('#t_ip3')">Copy Command</button>
+        <div class="step-box"><code id="t_ip1">git clone https://github.com/kinh17631-star/MyToolHub</code><button class="btn" onclick="copyIt('#t_ip1')">Copy Command</button></div>
+        <div class="step-box"><code id="t_ip2">cd MyToolHub/IP-Tracer</code><button class="btn" onclick="copyIt('#t_ip2')">Copy Command</button></div>
+        <div class="step-box"><code id="t_ip3">python3 install.py</code><button class="btn" onclick="copyIt('#t_ip3')">Copy Command</button></div>
+
+        <div class="ad-slot">
+            <script type="text/javascript">
+                atOptions = { 'key' : 'bd26ab7f8b0a23df1395ce040f31db29', 'format' : 'iframe', 'height' : 250, 'width' : 300, 'params' : {} };
+            </script>
+            <script type="text/javascript" src="https://www.highperformanceformat.com/bd26ab7f8b0a23df1395ce040f31db29/invoke.js"></script>
         </div>
 
         <div class="tool-name">3. PHONEINFO</div>
-        <div class="step-box slide-right">
-            <p>Step 1: Run Tool</p>
-            <code id="t_pi1">cd MyToolHub/PhoneInfo && python3 main.py</code>
-            <button class="btn" onclick="copyIt('#t_pi1')">Copy Command</button>
-        </div>
+        <div class="step-box"><code id="t_pi1">cd MyToolHub/PhoneInfo && python3 main.py</code><button class="btn" onclick="copyIt('#t_pi1')">Copy Command</button></div>
 
         <div class="tool-name">4. CAMWATCH</div>
-        <div class="step-box slide-left">
-            <p>Step 1: Clone CamWatch</p>
-            <code id="t_cw1">git clone https://github.com/kinh17631-star/CamWatch</code>
-            <button class="btn" onclick="copyIt('#t_cw1')">Copy Command</button>
-        </div>
-        <div class="step-box slide-right">
-            <p>Step 2: Run CamWatch</p>
-            <code id="t_cw2">cd CamWatch && python3 CamWatch.py</code>
-            <button class="btn" onclick="copyIt('#t_cw2')">Copy Command</button>
-        </div>
+        <div class="step-box"><code id="t_cw1">git clone https://github.com/kinh17631-star/CamWatch</code><button class="btn" onclick="copyIt('#t_cw1')">Copy Command</button></div>
+        <div class="step-box"><code id="t_cw2">cd CamWatch && python3 CamWatch.py</code><button class="btn" onclick="copyIt('#t_cw2')">Copy Command</button></div>
 
         <div class="platform-header" style="background: #005fb8;">FOR iSH SHELL (iOS)</div>
 
         <div class="tool-name">1. CAMWATCH (iOS Special)</div>
-        <div class="step-box slide-left">
-            <p>Step 1: Clone Repo</p>
-            <code id="i_cw1">git clone https://github.com/kinh17631-star/CamWatch</code>
-            <button class="btn" onclick="copyIt('#i_cw1')">Copy Command</button>
-        </div>
-        <div class="step-box slide-right">
-            <p>Step 2: Enter Folder</p>
-            <code id="i_cw2">cd CamWatch</code>
-            <button class="btn" onclick="copyIt('#i_cw2')">Copy Command</button>
-        </div>
-        <div class="step-box slide-left">
-            <p>Step 3: Install Requirements</p>
-            <code id="i_cw3">pip install -r requirements.txt</code>
-            <button class="btn" onclick="copyIt('#i_cw3')">Copy Command</button>
-        </div>
-        <div class="step-box slide-right">
-            <p>Step 4: Run Tool</p>
-            <code id="i_cw4">python3 CamWatch.py</code>
-            <button class="btn" onclick="copyIt('#i_cw4')">Copy Command</button>
+        <div class="step-box"><code id="i_cw1">git clone https://github.com/kinh17631-star/CamWatch</code><button class="btn" onclick="copyIt('#i_cw1')">Copy Command</button></div>
+        <div class="step-box"><code id="i_cw2">cd CamWatch</code><button class="btn" onclick="copyIt('#i_cw2')">Copy Command</button></div>
+        <div class="step-box"><code id="i_cw3">pip install -r requirements.txt</code><button class="btn" onclick="copyIt('#i_cw3')">Copy Command</button></div>
+        <div class="step-box"><code id="i_cw4">python3 CamWatch.py</code><button class="btn" onclick="copyIt('#i_cw4')">Copy Command</button></div>
+
+        <div class="ad-slot">
+            <script type="text/javascript">
+                atOptions = { 'key' : 'bd26ab7f8b0a23df1395ce040f31db29', 'format' : 'iframe', 'height' : 250, 'width' : 300, 'params' : {} };
+            </script>
+            <script type="text/javascript" src="https://www.highperformanceformat.com/bd26ab7f8b0a23df1395ce040f31db29/invoke.js"></script>
         </div>
 
-        <div class="tool-name">2. IP-TRACER (iSH)</div>
-        <div class="step-box slide-left">
-            <p>Step 1: Dependencies</p>
-            <code id="i_ip1">apk update && apk add python3 git</code>
-            <button class="btn" onclick="copyIt('#i_ip1')">Copy Command</button>
-        </div>
-        <div class="step-box slide-right">
-            <p>Step 2: Clone Repo</p>
-            <code id="i_ip2">git clone https://github.com/kinh17631-star/MyToolHub</code>
-            <button class="btn" onclick="copyIt('#i_ip2')">Copy Command</button>
-        </div>
-        <div class="step-box slide-left">
-            <p>Step 3: Start Installation</p>
-            <code id="i_ip3">cd MyToolHub/IP-Tracer && python3 install.py</code>
-            <button class="btn" onclick="copyIt('#i_ip3')">Copy Command</button>
-        </div>
+        <div class="tool-name">2. PHONEINFO (iOS)</div>
+        <div class="step-box"><code id="i_pi1">cd MyToolHub/PhoneInfo && python3 main.py</code><button class="btn" onclick="copyIt('#i_pi1')">Copy Command</button></div>
+
+        <div class="tool-name">3. IP-TRACER (iSH)</div>
+        <div class="step-box"><code id="i_ip1">apk update && apk add python3 git</code><button class="btn" onclick="copyIt('#i_ip1')">Copy Command</button></div>
+        <div class="step-box"><code id="i_ip2">git clone https://github.com/kinh17631-star/MyToolHub</code><button class="btn" onclick="copyIt('#i_ip2')">Copy Command</button></div>
+        <div class="step-box"><code id="i_ip3">cd MyToolHub/IP-Tracer && python3 install.py</code><button class="btn" onclick="copyIt('#i_ip3')">Copy Command</button></div>
 
     </div>
 
@@ -172,18 +118,6 @@
             var t = document.querySelector(id).innerText;
             navigator.clipboard.writeText(t).then(function() { 
                 alert("Command Copied!"); 
-            });
-        }
-
-        const boxes = document.querySelectorAll('.step-box');
-        window.addEventListener('scroll', checkBoxes);
-        checkBoxes();
-
-        function checkBoxes() {
-            const triggerBottom = window.innerHeight / 5 * 4;
-            boxes.forEach(box => {
-                const boxTop = box.getBoundingClientRect().top;
-                if(boxTop < triggerBottom) { box.classList.add('show'); }
             });
         }
     </script>
