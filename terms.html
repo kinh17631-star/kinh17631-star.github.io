@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms & Conditions | MyToolHub</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #005fb8;
+            --success-color: #238636;
+            --text-dark: #111111;
+            --text-muted: #444444;
+            --glass-bg: rgba(255, 255, 255, 0.7);
+            --glass-border: rgba(255, 255, 255, 0.9);
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(180deg, #e0f7fa, #e8f5e9, #fff3e0, #f3e5f5, #e3f2fd);
+            background-size: 100% 500%;
+            animation: bgMove 15s ease infinite alternate;
+            color: var(--text-dark);
+            margin: 0; padding: 40px 20px;
+        }
+        @keyframes bgMove { 0% { background-position: 50% 0%; } 100% { background-position: 50% 100%; } }
+        
+        .container {
+            max-width: 800px; margin: auto;
+            background: var(--glass-bg);
+            backdrop-filter: blur(15px);
+            border: 1px solid var(--glass-border);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            border-radius: 15px; padding: 40px;
+        }
+        h1 { color: var(--primary-color); border-bottom: 2px solid #ccc; padding-bottom: 10px; margin-top: 0; }
+        h3 { color: var(--primary-color); margin-top: 25px; }
+        p, li { line-height: 1.6; color: var(--text-muted); font-size: 15px; font-weight: 500; }
+        .warning-box { background: #ffebee; border-left: 4px solid #d32f2f; padding: 15px; margin: 20px 0; color: #b71c1c; font-weight: bold; border-radius: 4px; }
+        .btn-back { display: inline-block; margin-top: 30px; background-color: var(--text-dark); color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; font-weight: bold; transition: 0.3s; }
+        .btn-back:hover { background-color: #333; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Terms & Conditions</h1>
+        <p>Last updated: March 2026</p>
+        
+        <div class="warning-box">
+            <i class="fas fa-exclamation-triangle"></i> Strictly for Educational & Ethical Use Only.
+        </div>
+
+        <h3>1. Acceptance of Terms</h3>
+        <p>By accessing and using MyToolHub, you accept and agree to be bound by the terms and provisions of this agreement. All tools and scripts provided here are strictly for educational and ethical research purposes.</p>
+
+        <h3>2. Educational Purpose & Liability</h3>
+        <p>The developer (Aarif Saifi) assumes no liability and is not responsible for any misuse or damage caused by the scripts provided on this website. You are strictly prohibited from using these tools to target systems, networks, or accounts that you do not personally own or do not have explicit written permission to test.</p>
+
+        <h3>3. User Responsibilities</h3>
+        <ul>
+            <li>You agree to use the tools in compliance with all local, state, national, and international laws.</li>
+            <li>You will not use the platform to distribute malware, steal data, or harass individuals.</li>
+            <li>Any unauthorized access to third-party systems using these scripts is your sole responsibility.</li>
+        </ul>
+
+        <h3>4. Modifications</h3>
+        <p>We reserve the right to modify these terms at any time. Your continued use of the site after any changes indicates your acceptance of the new terms.</p>
+
+        <a href="index.html" class="btn-back"><i class="fas fa-arrow-left"></i> Back to Home</a>
+    </div>
+</body>
+</html>
