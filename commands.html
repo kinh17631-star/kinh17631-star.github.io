@@ -6,18 +6,41 @@
     <title>MyToolHub - Official Commands</title>
     
     <style>
-        body { font-family: 'Courier New', monospace; background-color: #0d1117; color: #c9d1d9; padding: 20px; overflow-x: hidden; }
+        /* Background cream color and general text color updated for visibility */
+        body { font-family: 'Courier New', monospace; background-color: #F5F5DC; color: #111; padding: 20px; overflow-x: hidden; }
         .container { max-width: 650px; margin: auto; }
-        h1 { text-align: center; color: #58a6ff; margin-bottom: 30px; border-bottom: 2px solid #30363d; padding-bottom: 10px; }
+        h1 { text-align: center; color: #005fb8; margin-bottom: 30px; border-bottom: 2px solid #ccc; padding-bottom: 10px; font-weight: 900; }
         .warning-text { background: #ffcc00; color: #000; padding: 15px; border-radius: 5px; font-weight: bold; text-align: center; margin-bottom: 20px; font-size: 14px; border: 2px solid #ccaa00; }
         .platform-header { background: #238636; color: white; padding: 10px; border-radius: 5px; text-align: center; margin: 40px 0 20px 0; font-size: 20px; font-weight: bold; }
-        .tool-name { color: #f0883e; font-size: 18px; margin-top: 35px; border-left: 4px solid #f0883e; padding-left: 10px; font-weight: bold; text-transform: uppercase; }
-        .step-box { background: #161b22; border: 1px solid #30363d; padding: 15px; border-radius: 8px; margin-bottom: 10px; }
-        p { color: #8b949e; font-size: 13px; margin-bottom: 8px; font-weight: bold; }
-        code { background: #000; color: #39ff14; padding: 12px; display: block; border-radius: 4px; border: 1px solid #333; margin-bottom: 10px; overflow-x: auto; }
+        .tool-name { color: #d03a00; font-size: 18px; margin-top: 35px; border-left: 4px solid #d03a00; padding-left: 10px; font-weight: bold; text-transform: uppercase; }
+        
+        /* Box Styling and Animation */
+        .step-box { background: #fff; border: 1px solid #ccc; padding: 15px; border-radius: 8px; margin-bottom: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
+            opacity: 0; transform: translateX(-100px); transition: all 0.6s ease-out; 
+        }
+        .step-box.show { opacity: 1; transform: translateX(0); }
+        
+        p { color: #444; font-size: 13px; margin-bottom: 8px; font-weight: bold; }
+        
+        /* Code is now Black as requested, background light grey for readability */
+        code { background: #e0e0e0; color: #000; padding: 12px; display: block; border-radius: 4px; border: 1px solid #bbb; margin-bottom: 10px; overflow-x: auto; font-weight: bold; }
         .btn { background: #21262d; color: #58a6ff; border: 1px solid #30363d; padding: 10px; border-radius: 5px; cursor: pointer; font-weight: bold; width: 100%; transition: 0.3s; }
         .btn:hover { background: #30363d; border-color: #8b949e; }
         .ad-slot { text-align: center; margin: 30px 0; min-height: 250px; }
+
+        /* Hacker Code Area at the Top */
+        .hacker-bg { background: #000; color: #0f0; padding: 15px; border-radius: 5px; font-size: 13px; margin-bottom: 30px; border: 1px solid #0f0; overflow: hidden; white-space: pre-wrap; box-shadow: 0 0 10px rgba(0,255,0,0.3); }
+        
+        /* Info Section at the Bottom */
+        .info-section { margin-top: 50px; padding: 20px; background: #fff; border-radius: 8px; border: 1px solid #ccc; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+        .info-section h2 { color: #d03a00; text-align: center; border-bottom: 2px solid #ccc; padding-bottom: 10px; }
+        .info-text { font-size: 14px; line-height: 1.6; color: #222; margin-bottom: 20px; font-weight: bold; }
+        .hacker-img-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
+        .hacker-card { background: #0d1117; border-radius: 5px; padding: 10px; text-align: center; border: 1px solid #30363d; box-shadow: 0 0 8px rgba(0,0,0,0.5); }
+        .hacker-card img { width: 100%; height: 120px; object-fit: cover; border-radius: 3px; margin-bottom: 8px; filter: grayscale(50%) contrast(120%); border: 1px solid #0f0; }
+        .hacker-card p { color: #39ff14; font-size: 12px; margin: 0; font-weight: bold; }
+        
+        @media (max-width: 600px) { .hacker-img-grid { grid-template-columns: 1fr; } }
     </style>
 </head>
 <body>
@@ -25,6 +48,14 @@
     <div class="container">
         <div class="warning-text">
             ⚠️ WARNING: Any misuse of these tools is strictly prohibited. The developer is not responsible for any illegal actions or damage caused by these scripts. Use at your own risk.
+        </div>
+
+        <div class="hacker-bg">
+[root@MyToolHub ~]# Initializing Secure Connection... [OK]
+[root@MyToolHub ~]# Bypassing Security Protocols... [DONE]
+[root@MyToolHub ~]# Accessing Encrypted Database... 
+[root@MyToolHub ~]# Fetching Server Payloads... 100%
+[root@MyToolHub ~]# COMMANDS READY FOR DEPLOYMENT.
         </div>
 
         <script src="https://pl28842396.effectivegatecpm.com/78/66/06/7866062a1a9ed246b50285d5b3aeeff3.js"></script>
@@ -60,6 +91,12 @@
         <div class="step-box"><code id="t_cw1">git clone https://github.com/kinh17631-star/CamWatch</code><button class="btn" onclick="copyIt('#t_cw1')">Copy Command</button></div>
         <div class="step-box"><code id="t_cw2">cd CamWatch && python3 CamWatch.py</code><button class="btn" onclick="copyIt('#t_cw2')">Copy Command</button></div>
 
+        <div class="tool-name">5. PASS-BRUTE</div>
+        <div class="step-box"><code id="t_pb1">git clone https://github.com/kinh17631-star/Pass-Brute.git</code><button class="btn" onclick="copyIt('#t_pb1')">Copy Command</button></div>
+        <div class="step-box"><code id="t_pb2">cd Pass-Brute</code><button class="btn" onclick="copyIt('#t_pb2')">Copy Command</button></div>
+        <div class="step-box"><code id="t_pb3">chmod +x Pass-Brute.sh</code><button class="btn" onclick="copyIt('#t_pb3')">Copy Command</button></div>
+        <div class="step-box"><code id="t_pb4">./Pass-Brute.sh</code><button class="btn" onclick="copyIt('#t_pb4')">Copy Command</button></div>
+
         <div class="platform-header" style="background: #005fb8;">FOR iSH SHELL (iOS)</div>
 
         <div class="tool-name">1. PHONE-CLONER (iOS)</div>
@@ -89,11 +126,64 @@
         <div class="step-box"><code id="i_ip2">git clone https://github.com/kinh17631-star/MyToolHub</code><button class="btn" onclick="copyIt('#i_ip2')">Copy Command</button></div>
         <div class="step-box"><code id="i_ip3">cd MyToolHub/IP-Tracer && python3 install.py</code><button class="btn" onclick="copyIt('#i_ip3')">Copy Command</button></div>
 
+        <div class="tool-name">5. PASS-BRUTE (iSH)</div>
+        <div class="step-box"><code id="i_pb1">apk update && apk add git bash</code><button class="btn" onclick="copyIt('#i_pb1')">Copy Command</button></div>
+        <div class="step-box"><code id="i_pb2">git clone https://github.com/kinh17631-star/Pass-Brute.git</code><button class="btn" onclick="copyIt('#i_pb2')">Copy Command</button></div>
+        <div class="step-box"><code id="i_pb3">cd Pass-Brute</code><button class="btn" onclick="copyIt('#i_pb3')">Copy Command</button></div>
+        <div class="step-box"><code id="i_pb4">chmod +x Pass-Brute.sh</code><button class="btn" onclick="copyIt('#i_pb4')">Copy Command</button></div>
+        <div class="step-box"><code id="i_pb5">./Pass-Brute.sh</code><button class="btn" onclick="copyIt('#i_pb5')">Copy Command</button></div>
+
         <div class="ad-slot">
             <script type="text/javascript">
                 atOptions = { 'key' : 'bd26ab7f8b0a23df1395ce040f31db29', 'format' : 'iframe', 'height' : 250, 'width' : 300, 'params' : {} };
             </script>
             <script type="text/javascript" src="https://www.highperformanceformat.com/bd26ab7f8b0a23df1395ce040f31db29/invoke.js"></script>
+        </div>
+
+        <div class="info-section">
+            <h2>About Termux & iSH</h2>
+            <div class="info-text">
+                Understanding your terminal environment is the first step toward advanced digital security. 
+                <br><br>
+                <b>Termux</b> is an Android terminal emulator and Linux environment app that works directly with no rooting or setup required. A minimal base system is installed automatically. 
+                <br><br>
+                <b>iSH Shell</b> brings a Linux shell environment locally to your iOS device. It uses a usermode x86 emulator to run Alpine Linux, giving iPhone users the power of command-line tools right in their pockets.
+            </div>
+
+            <div class="hacker-img-grid">
+                <div class="hacker-card">
+                    <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=400&q=80" alt="Code Matrix">
+                    <p>Executing Payloads</p>
+                </div>
+                <div class="hacker-card">
+                    <img src="https://images.unsplash.com/photo-1510511459019-5d138070d859?auto=format&fit=crop&w=400&q=80" alt="Server Setup">
+                    <p>Server Connectivity</p>
+                </div>
+                <div class="hacker-card">
+                    <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=400&q=80" alt="Cyber Security">
+                    <p>System Auditing</p>
+                </div>
+                <div class="hacker-card">
+                    <img src="https://images.unsplash.com/photo-1542831371-29b0f74f9713?auto=format&fit=crop&w=400&q=80" alt="Terminal Commands">
+                    <p>Terminal Mastery</p>
+                </div>
+                <div class="hacker-card">
+                    <img src="https://images.unsplash.com/photo-1563206767-5b18f218e8de?auto=format&fit=crop&w=400&q=80" alt="Digital Grid">
+                    <p>Network Mapping</p>
+                </div>
+                <div class="hacker-card">
+                    <img src="https://images.unsplash.com/photo-1614064641913-6b1e6047247d?auto=format&fit=crop&w=400&q=80" alt="Data Flow">
+                    <p>Data Extraction</p>
+                </div>
+                <div class="hacker-card">
+                    <img src="https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?auto=format&fit=crop&w=400&q=80" alt="Mobile Hacking">
+                    <p>Mobile Penetration</p>
+                </div>
+                <div class="hacker-card">
+                    <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?auto=format&fit=crop&w=400&q=80" alt="Security Lock">
+                    <p>Privacy Protocols</p>
+                </div>
+            </div>
         </div>
 
     </div>
@@ -105,6 +195,20 @@
                 alert("Command Copied!"); 
             });
         }
+
+        // Scroll Animation Logic
+        document.addEventListener("DOMContentLoaded", function() {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('show');
+                    }
+                });
+            });
+            
+            // Watch all command boxes
+            document.querySelectorAll('.step-box').forEach((el) => observer.observe(el));
+        });
     </script>
 </body>
 </html>
