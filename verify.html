@@ -3,37 +3,192 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Verify - MyToolHub</title>
+    <title>Security Check | MyToolHub</title>
+    
     <script src="https://pl28842396.effectivegatecpm.com/78/66/06/7866062a1a9ed246b50285d5b3aeeff3.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
     <style>
-        body { font-family: 'Courier New', monospace; background-color: #0d1117; color: #c9d1d9; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; text-align: center; }
-        .box { border: 1px solid #30363d; padding: 40px; border-radius: 10px; background: #161b22; width: 80%; max-width: 400px; }
-        #timer { font-size: 40px; color: #f0883e; font-weight: bold; margin: 20px 0; }
-        .btn { background-color: #238636; color: white; padding: 12px 24px; text-decoration: none; border-radius: 5px; font-weight: bold; display: none; }
+        /* CSS Variables exactly like index.html */
+        :root {
+            --primary-color: #005fb8;
+            --success-color: #238636;
+            --text-dark: #111111;
+            --text-muted: #555555;
+            --glass-bg: rgba(255, 255, 255, 0.6);
+            --glass-border: rgba(255, 255, 255, 0.9);
+        }
+
+        /* Full page centering with scrolling lite background */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(180deg, #e0f7fa, #e8f5e9, #fff3e0, #f3e5f5, #e3f2fd);
+            background-size: 100% 500%;
+            animation: bgMove 15s ease infinite alternate;
+            color: var(--text-dark);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        @keyframes bgMove { 0% { background-position: 50% 0%; } 100% { background-position: 50% 100%; } }
+
+        /* Glass Verification Box */
+        .verify-box {
+            background: var(--glass-bg);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border: 1px solid var(--glass-border);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            border-radius: 16px;
+            padding: 30px;
+            text-align: center;
+            max-width: 450px;
+            width: 90%;
+            transition: all 0.5s ease;
+        }
+
+        /* Header Section */
+        .header-section { margin-bottom: 20px; }
+        .icon-container { font-size: 50px; color: var(--primary-color); margin-bottom: 15px; transition: 0.3s; }
+        h2 { margin: 0 0 5px 0; color: var(--primary-color); font-weight: 900; font-size: 24px; }
+        p { color: var(--text-muted); font-size: 14px; font-weight: 500; margin: 0; }
+
+        /* Flexbox for Loader and Timer */
+        .loader-container { display: flex; align-items: center; justify-content: center; gap: 15px; margin: 20px 0; }
+        
+        .spinner {
+            border: 3px solid rgba(0, 95, 184, 0.15);
+            border-top: 3px solid var(--primary-color);
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            animation: spin 1s linear infinite;
+        }
+        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+
+        #timer-text { font-weight: bold; color: #d03a00; font-size: 16px; }
+
+        /* Live Terminal Box (To keep visitors engaged) */
+        .terminal-box {
+            background: #0d1117;
+            color: #39ff14;
+            font-family: 'Courier New', Courier, monospace;
+            text-align: left;
+            padding: 15px;
+            border-radius: 8px;
+            height: 110px;
+            overflow-y: hidden;
+            font-size: 12px;
+            border: 1px solid #30363d;
+            box-shadow: inset 0 0 10px rgba(0,255,0,0.1);
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+
+        /* Continue Button (Hidden initially) */
+        .btn {
+            display: none;
+            background-color: var(--success-color);
+            color: white; padding: 15px 30px; text-decoration: none; border-radius: 8px; font-weight: bold; font-size: 18px; width: 100%; box-sizing: border-box; transition: 0.3s; border: none; box-shadow: 0 4px 15px rgba(35, 134, 54, 0.3);
+            text-transform: uppercase; letter-spacing: 1px;
+        }
+        .btn:hover { background-color: #1e702e; transform: translateY(-2px); box-shadow: 0 6px 20px rgba(35, 134, 54, 0.5); }
+        .btn i { margin-left: 8px; }
+
     </style>
 </head>
 <body>
-    <div class="box">
-        <h2>Verification</h2>
-        <p>Please wait while we verify your session...</p>
-        <div id="timer">10</div>
-        <a href="commands.html" id="continueBtn" class="btn">Continue to Commands</a>
+
+    <div class="verify-box" id="verify-box">
+        
+        <div class="header-section">
+            <div class="icon-container" id="status-icon">
+                <i class="fas fa-shield-alt"></i>
+            </div>
+            <h2 id="status-title">Security Verification</h2>
+            <p id="status-desc">Please wait while we check your browser...</p>
+        </div>
+        
+        <div class="loader-container" id="loader-container">
+            <div class="spinner" id="spinner"></div>
+            <div id="timer-text">Verifying... <span id="time">5</span>s</div>
+        </div>
+
+        <div class="terminal-box" id="terminal-box">
+            <div>[root@system]~# Initiating secure handshake...</div>
+        </div>
+        
+        <a href="commands.html" class="btn" id="continue-btn">Access Commands <i class="fas fa-lock-open"></i></a>
     </div>
 
     <script>
-        let seconds = 10;
-        const timerEl = document.getElementById('timer');
-        const btnEl = document.getElementById('continueBtn');
+        let timeLeft = 5;
+        const timerElement = document.getElementById('time');
+        const loaderContainer = document.getElementById('loader-container');
+        const btn = document.getElementById('continue-btn');
+        const statusIcon = document.getElementById('status-icon');
+        const statusTitle = document.getElementById('status-title');
+        const statusDesc = document.getElementById('status-desc');
+        const terminalBox = document.getElementById('terminal-box');
 
-        const countdown = setInterval(() => {
-            seconds--;
-            timerEl.innerText = seconds;
-            if (seconds <= 0) {
-                clearInterval(countdown);
-                timerEl.style.display = 'none';
-                btnEl.style.display = 'inline-block';
+        // Fake Hacker Terminal Lines
+        const terminalLines = [
+            "Checking local network configurations... [OK]",
+            "Bypassing standard tracking protocols... [DONE]",
+            "Verifying client integrity via Cloudflare... [OK]",
+            "Fetching encrypted payloads from GitHub... [LOADING]",
+            "Decrypting repository access tokens... [SUCCESS]",
+            "Securing connection tunnel... [VERIFIED]",
+            "[root@system]~# ALL SYSTEMS GREEN. ACCESS GRANTED."
+        ];
+
+        let lineIndex = 0;
+
+        // Terminal Typing Effect (Types a new line every 700ms)
+        const typeTerminal = setInterval(() => {
+            if (lineIndex < terminalLines.length) {
+                const newLine = document.createElement('div');
+                newLine.textContent = terminalLines[lineIndex];
+                terminalBox.appendChild(newLine);
+                
+                // Auto scroll to bottom
+                terminalBox.scrollTop = terminalBox.scrollHeight;
+                lineIndex++;
             }
-        }, 1000);
+        }, 700);
+
+        // Countdown Timer Logic
+        const countdown = setInterval(() => {
+            timeLeft--;
+            timerElement.textContent = timeLeft;
+            
+            // When timer hits 0
+            if (timeLeft <= 0) {
+                clearInterval(countdown); // Stop timer
+                clearInterval(typeTerminal); // Stop terminal typing
+                
+                // Hide loader section entirely
+                loaderContainer.style.display = 'none';
+                
+                // Change Icon and Text
+                statusIcon.innerHTML = '<i class="fas fa-check-circle" style="color: #238636; text-shadow: 0 0 10px rgba(35,134,54,0.4);"></i>';
+                statusTitle.textContent = 'Connection Secured';
+                statusTitle.style.color = '#238636';
+                statusDesc.textContent = 'Verification complete. You are safe to proceed.';
+                
+                // Dim the terminal slightly to focus on button
+                terminalBox.style.opacity = '0.5';
+                
+                // Show Continue Button
+                btn.style.display = 'inline-block';
+            }
+        }, 1000); // 1000ms = 1 second
     </script>
+
 </body>
 </html>
