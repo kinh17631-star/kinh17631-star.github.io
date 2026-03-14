@@ -16,8 +16,9 @@
             --success-color: #238636;
             --text-dark: #111111;
             --text-muted: #444444;
-            --glass-bg: rgba(255, 255, 255, 0.6);
-            --glass-border: rgba(255, 255, 255, 0.9);
+            /* Updated for iOS Glass Effect */
+            --glass-bg: rgba(255, 255, 255, 0.2);
+            --glass-border: rgba(255, 255, 255, 0.4);
         }
 
         /* Scroll Base Background - Lite Colors */
@@ -34,14 +35,16 @@
             transition: background-position 0.1s ease-out; /* Smooth effect */
         }
 
-        /* Glassmorphism (Mirror) Effect - Now transparent White */
+        /* Glassmorphism (Mirror) Effect - iOS iPhone Widget Style */
         .glass-panel {
-            background: var(--glass-bg);
-            backdrop-filter: blur(15px);
-            -webkit-backdrop-filter: blur(15px);
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.05));
+            backdrop-filter: blur(25px);
+            -webkit-backdrop-filter: blur(25px);
             border: 1px solid var(--glass-border);
-            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.1);
-            border-radius: 15px;
+            border-top: 1px solid rgba(255, 255, 255, 0.7);
+            border-left: 1px solid rgba(255, 255, 255, 0.7);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.05);
+            border-radius: 20px;
         }
 
         .container { max-width: 800px; margin: auto; padding: 40px 20px; }
