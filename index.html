@@ -25,16 +25,17 @@
             margin: 0;
             padding: 0;
             overflow-x: hidden;
+            /* 400% height linear gradient for smooth scrolling colors */
             background: linear-gradient(180deg, #e0f7fa, #e8f5e9, #fff3e0, #f3e5f5, #e3f2fd);
             background-size: 100% 500%;
             background-position: 50% 0%;
-            transition: background-position 0.1s ease-out; 
+            transition: background-position 0.1s ease-out; /* Smooth effect on scroll */
         }
 
-        /* Clean Glassmorphism */
+        /* Clean Glassmorphism - Transparent so background colors show through */
         .glass-panel {
-            background: rgba(255, 255, 255, 0.3);
-            backdrop-filter: blur(12px);
+            background: rgba(255, 255, 255, 0.3); /* Transparent White */
+            backdrop-filter: blur(12px); /* Glass Blur */
             -webkit-backdrop-filter: blur(12px);
             border: 1px solid rgba(255, 255, 255, 0.6);
             border-top: 1px solid rgba(255, 255, 255, 0.9);
@@ -49,7 +50,7 @@
         .hero { text-align: center; padding: 40px 20px; margin-bottom: 40px; }
         .profile-img { width: 140px; height: 140px; border-radius: 50%; border: 4px solid #fff; margin-bottom: 20px; object-fit: cover; box-shadow: 0 5px 15px rgba(0,0,0,0.15); }
         h1 { color: var(--primary-color); font-size: 32px; margin-bottom: 5px; font-weight: 900; }
-        .tagline { font-size: 16px; color: var(--text-muted); margin-bottom: 30px; line-height: 1.5; font-weight: 600; min-height: 48px; }
+        .tagline { font-size: 16px; color: var(--text-muted); margin-bottom: 30px; line-height: 1.5; font-weight: 600; }
         
         /* Glowing Button */
         .btn {
@@ -60,15 +61,15 @@
         .btn:hover { background-color: #1e702e; box-shadow: 0 6px 20px rgba(35, 134, 54, 0.5); transform: translateY(-2px); }
 
         /* Section Headings */
-        h2 { color: var(--primary-color); border-bottom: 2px solid #ccc; padding-bottom: 10px; margin-top: 50px; font-size: 24px; text-align: center; font-weight: 900; min-height: 35px;}
+        h2 { color: var(--primary-color); border-bottom: 2px solid #ccc; padding-bottom: 10px; margin-top: 50px; font-size: 24px; text-align: center; font-weight: 900;}
 
         /* Featured Tools Grid */
         .tools-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; margin-top: 20px; }
         .tool-card { padding: 20px; text-align: center; transition: transform 0.3s; }
         .tool-card:hover { transform: translateY(-5px); border-color: var(--primary-color); }
         .tool-icon { font-size: 30px; color: var(--primary-color); margin-bottom: 10px; }
-        .tool-title { font-weight: bold; color: var(--text-dark); margin-bottom: 10px; font-size: 18px; min-height: 25px;}
-        .tool-desc { font-size: 14px; color: var(--text-muted); line-height: 1.4; font-weight: 600; min-height: 40px;}
+        .tool-title { font-weight: bold; color: var(--text-dark); margin-bottom: 10px; font-size: 18px; }
+        .tool-desc { font-size: 14px; color: var(--text-muted); line-height: 1.4; font-weight: 600;}
 
         /* Why Choose Us Section */
         .features-list { display: flex; flex-direction: column; gap: 15px; margin-top: 20px; }
@@ -77,7 +78,7 @@
         .feature-item strong { color: var(--text-dark); font-size: 16px; font-weight: bold; }
         .feature-item p { margin: 5px 0 0 0; font-size: 14px; color: var(--text-muted); font-weight: 600; }
 
-        /* Hacking Knowledge Sections */
+        /* Hacking Knowledge Sections with Images */
         .knowledge-section { display: flex; flex-direction: column; gap: 30px; margin-top: 30px; }
         .knowledge-item { display: flex; align-items: center; gap: 25px; padding: 25px; transition: all 0.3s ease; }
         .knowledge-item:hover { border-color: rgba(0, 95, 184, 0.4); transform: scale(1.01); }
@@ -98,6 +99,7 @@
             color: var(--text-dark); font-size: 24px; transition: all 0.3s ease; 
             background: #fff; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center; border-radius: 50%; box-shadow: 0 2px 5px rgba(0,0,0,0.1); border: 1px solid #eee;
         }
+        /* Social Hover Colors */
         .social-icon.insta:hover { color: #fff; background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); border-color: transparent; }
         .social-icon.fb:hover { color: #fff; background: #1877F2; border-color: transparent; }
         .social-icon.yt:hover { color: #fff; background: #FF0000; border-color: transparent; }
@@ -106,20 +108,13 @@
         .footer-links a:hover { color: var(--success-color); text-decoration: underline; }
         .copyright { font-size: 13px; color: #666; margin-top: 15px; font-weight: bold; }
 
+        /* Responsive adjustments for mobile */
         @media (max-width: 650px) { 
             h1 { font-size: 26px; } 
             .tools-grid { grid-template-columns: 1fr; } 
             .knowledge-item { flex-direction: column; text-align: center; }
             .knowledge-img { width: 100%; height: 200px; }
         }
-        
-        /* Typing cursor animation */
-        .typing-cursor::after {
-            content: '|';
-            animation: blink 1s step-end infinite;
-            color: var(--primary-color);
-        }
-        @keyframes blink { 50% { opacity: 0; } }
     </style>
 </head>
 <body>
@@ -129,80 +124,80 @@
         <div class="hero glass-panel">
             <img src="https://github.com/kinh17631-star.png" alt="Aarif Saifi" class="profile-img">
             <h1>Aarif Saifi</h1>
-            <p class="tagline type-target"></p>
+            <p class="tagline">Welcome to MyToolHub - The Ultimate Destination for Advanced Terminal Scripts & Security Tools.</p>
             
             <a href="verify.html" class="btn">Access Tools Now</a>
         </div>
 
-        <h2 class="type-target"></h2>
+        <h2>Featured Scripts</h2>
         <div class="tools-grid">
             <div class="tool-card glass-panel">
                 <i class="fas fa-mobile-alt tool-icon"></i>
-                <div class="tool-title type-target"></div>
-                <div class="tool-desc type-target"></div>
+                <div class="tool-title">Phone-Cloner</div>
+                <div class="tool-desc">Advanced cloning utility optimized for Termux & iSH environments.</div>
             </div>
             <div class="tool-card glass-panel">
                 <i class="fas fa-shield-alt tool-icon"></i>
-                <div class="tool-title type-target"></div>
-                <div class="tool-desc type-target"></div>
+                <div class="tool-title">Pass-Brute</div>
+                <div class="tool-desc">Educational password security testing tool with dictionary support.</div>
             </div>
             <div class="tool-card glass-panel">
                 <i class="fas fa-network-wired tool-icon"></i>
-                <div class="tool-title type-target"></div>
-                <div class="tool-desc type-target"></div>
+                <div class="tool-title">IP-Tracer</div>
+                <div class="tool-desc">Accurate network mapping and packet tracing utility.</div>
             </div>
         </div>
 
-        <h2 class="type-target"></h2>
+        <h2>Why MyToolHub?</h2>
         <div class="features-list">
             <div class="feature-item glass-panel">
                 <i class="fab fa-apple"></i>
                 <div>
-                    <strong class="type-target"></strong>
-                    <p class="type-target"></p>
+                    <strong>Cross-Platform Support</strong>
+                    <p>Scripts fully tested and optimized for both Android (Termux) and iOS (iSH Shell).</p>
                 </div>
             </div>
             <div class="feature-item glass-panel">
                 <i class="fas fa-code-branch"></i>
                 <div>
-                    <strong class="type-target"></strong>
-                    <p class="type-target"></p>
+                    <strong>Open Source Base</strong>
+                    <p>Transparent code hosted securely. Learn, modify, and deploy with ease.</p>
                 </div>
             </div>
         </div>
 
-        <h2 class="type-target"></h2>
+        <h2>Terminal Knowledge Hub</h2>
         <div class="knowledge-section">
             
             <div class="knowledge-item glass-panel">
                 <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=400&q=80" alt="Terminal Command Line" class="knowledge-img">
                 <div class="knowledge-text">
-                    <h3 class="type-target"></h3>
-                    <p class="type-target"></p>
+                    <h3>0x01: Mobile Shell Mastery</h3>
+                    <p>Unlock the true potential of your smartphone. Termux and iSH offer a full Linux environment, allowing you to run powerful terminal tools, analyze networks, and manage repositories directly from your mobile device without rooting or jailbreaking.</p>
                 </div>
             </div>
 
             <div class="knowledge-item glass-panel">
                 <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=400&q=80" alt="Python Scripting" class="knowledge-img">
                 <div class="knowledge-text">
-                    <h3 class="type-target"></h3>
-                    <p class="type-target"></p>
+                    <h3>0x02: Automated Ethical Hacking</h3>
+                    <p>Efficiency is key in cybersecurity. Modern security auditing relies heavily on automation scripts written in Python and Bash. Learn to deploy pre-configured payloads and automate reconnaissance phases for authorized penetration testing.</p>
                 </div>
             </div>
 
             <div class="knowledge-item glass-panel">
                 <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=400&q=80" alt="Network Security" class="knowledge-img">
                 <div class="knowledge-text">
-                    <h3 class="type-target"></h3>
-                    <p class="type-target"></p>
+                    <h3>0x03: Deep Network Auditing</h3>
+                    <p>Understand how data flows across the web. Network security audits involve tracing packets, analyzing open ports, and identifying vulnerabilities within a network infrastructure. Tools like IP-Tracer provide vital data for network researchers.</p>
                 </div>
             </div>
 
             <div class="knowledge-item glass-panel">
                 <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=400&q=80" alt="Password Security" class="knowledge-img">
                 <div class="knowledge-text">
-                    <h3 class="type-target"></h3>
-                    <p class="type-target"></p>
+                    <h3>0x04: Cryptography & Brute-Force</h3>
+                    <p>Testing the strength of passwords is a fundamental aspect of digital security. Educational brute-force scripts demonstrate how easily weak passwords can be compromised using dictionary attacks, emphasizing the need for robust cryptographic practices.</p>
                 </div>
             </div>
 
@@ -228,70 +223,16 @@
     </div>
 
     <script>
-        // 1. Scroll Background Gradient Logic
         window.addEventListener('scroll', () => {
+            // Calculate how far down the user has scrolled
             let scrollY = window.scrollY;
             let maxScroll = document.documentElement.scrollHeight - window.innerHeight;
-            let scrollPercent = (scrollY / maxScroll) * 100;
-            document.body.style.backgroundPosition = `50% ${scrollPercent}%`;
-        });
-
-        // 2. Super Fast Scroll Typing Logic
-        document.addEventListener("DOMContentLoaded", function() {
-            // Original Text Data (We store it here so it's clean and safe to type)
-            const textData = [
-                "Welcome to MyToolHub - The Ultimate Destination for Advanced Terminal Scripts & Security Tools.",
-                "Featured Scripts",
-                "Phone-Cloner", "Advanced cloning utility optimized for Termux & iSH environments.",
-                "Pass-Brute", "Educational password security testing tool with dictionary support.",
-                "IP-Tracer", "Accurate network mapping and packet tracing utility.",
-                "Why MyToolHub?",
-                "Cross-Platform Support", "Scripts fully tested and optimized for both Android (Termux) and iOS (iSH Shell).",
-                "Open Source Base", "Transparent code hosted securely. Learn, modify, and deploy with ease.",
-                "Terminal Knowledge Hub",
-                "0x01: Mobile Shell Mastery", "Unlock the true potential of your smartphone. Termux and iSH offer a full Linux environment, allowing you to run powerful terminal tools, analyze networks, and manage repositories directly from your mobile device without rooting or jailbreaking.",
-                "0x02: Automated Ethical Hacking", "Efficiency is key in cybersecurity. Modern security auditing relies heavily on automation scripts written in Python and Bash. Learn to deploy pre-configured payloads and automate reconnaissance phases for authorized penetration testing.",
-                "0x03: Deep Network Auditing", "Understand how data flows across the web. Network security audits involve tracing packets, analyzing open ports, and identifying vulnerabilities within a network infrastructure. Tools like IP-Tracer provide vital data for network researchers.",
-                "0x04: Cryptography & Brute-Force", "Testing the strength of passwords is a fundamental aspect of digital security. Educational brute-force scripts demonstrate how easily weak passwords can be compromised using dictionary attacks, emphasizing the need for robust cryptographic practices."
-            ];
-
-            const typingSpeed = 10; // 10ms (super fast)
-            const elements = document.querySelectorAll('.type-target');
             
-            // Assign text to elements
-            elements.forEach((el, index) => {
-                if(textData[index]) {
-                    el.setAttribute('data-text', textData[index]);
-                }
-            });
-
-            // Intersection Observer to trigger typing when scrolled into view
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting && !entry.target.classList.contains('typed')) {
-                        entry.target.classList.add('typed');
-                        entry.target.classList.add('typing-cursor'); // Add blinking cursor
-                        let originalText = entry.target.getAttribute('data-text');
-                        if(originalText) {
-                            typeFast(entry.target, originalText, 0);
-                        }
-                    }
-                });
-            }, { threshold: 0.1 });
-
-            // Start observing
-            elements.forEach(el => observer.observe(el));
-
-            // Typing Function
-            function typeFast(element, text, index) {
-                if (index < text.length) {
-                    element.innerHTML += text.charAt(index);
-                    setTimeout(() => typeFast(element, text, index + 1), typingSpeed);
-                } else {
-                    // Remove cursor when done typing
-                    setTimeout(() => { element.classList.remove('typing-cursor'); }, 500);
-                }
-            }
+            // Convert to a percentage (0 to 100)
+            let scrollPercent = (scrollY / maxScroll) * 100;
+            
+            // Move the background gradient position based on scroll percentage
+            document.body.style.backgroundPosition = `50% ${scrollPercent}%`;
         });
     </script>
 </body>
