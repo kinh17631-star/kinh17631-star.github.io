@@ -16,8 +16,8 @@
             --success-color: #238636;
             --text-dark: #111111;
             --text-muted: #444444;
-            /* Updated for iOS Glass Effect */
-            --glass-bg: rgba(255, 255, 255, 0.2);
+            /* Water View Transparent Variables */
+            --glass-bg: rgba(255, 255, 255, 0.05); /* एकदम साफ़ पानी जैसा (Almost fully transparent) */
             --glass-border: rgba(255, 255, 255, 0.4);
         }
 
@@ -35,16 +35,16 @@
             transition: background-position 0.1s ease-out; /* Smooth effect */
         }
 
-        /* Glassmorphism (Mirror) Effect - iOS iPhone Widget Style */
+        /* Water View Transparent Effect */
         .glass-panel {
-            background: linear-gradient(135deg, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.05));
-            backdrop-filter: blur(25px);
-            -webkit-backdrop-filter: blur(25px);
+            background: var(--glass-bg);
+            backdrop-filter: blur(8px); /* पानी जैसा हल्का ब्लर */
+            -webkit-backdrop-filter: blur(8px);
             border: 1px solid var(--glass-border);
-            border-top: 1px solid rgba(255, 255, 255, 0.7);
-            border-left: 1px solid rgba(255, 255, 255, 0.7);
-            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.05);
-            border-radius: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.8); /* पानी की चमक (Reflection) */
+            border-left: 1px solid rgba(255, 255, 255, 0.8);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.05); /* पानी की हल्की परछाई */
+            border-radius: 15px;
         }
 
         .container { max-width: 800px; margin: auto; padding: 40px 20px; }
