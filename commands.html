@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MyToolHub - Official Commands | Aarif Saifi</title>
     
-    <script src="https://pl28906780.effectivegatecpm.com/5b/dc/07/5bdc07338484ab9f1107df2c08bcce4f.js"></script>
+    <script type='text/javascript' src='//pl28906780.effectivegatecpm.com/5b/dc/07/5bdc07338484ab9f1107df2c08bcce4f.js'></script>
 
     <style>
-        /* Base Styling */
+        /* Base Styling & Scroll Background */
         body { 
             font-family: 'Courier New', monospace; 
             color: #111; 
@@ -56,7 +56,7 @@
         .btn:hover { background: #30363d; border-color: #8b949e; transform: translateY(-2px); box-shadow: 0 4px 10px rgba(0,0,0,0.15); }
         
         /* Ad Slot Box */
-        .ad-slot { text-align: center; margin: 30px 0; min-height: 250px; display: flex; align-items: center; justify-content: center; }
+        .ad-slot { text-align: center; margin: 30px 0; min-height: 250px; display: flex; align-items: center; justify-content: center; overflow: hidden; }
 
         /* Guide Section Styling */
         .info-section { margin-top: 50px; }
@@ -126,6 +126,21 @@
                 <p>Most modern security tools are written in Python. It's lightweight, fast, and perfect for creating automation scripts for ethical hacking and system audits.</p>
                 <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=800&q=80" alt="Python Scripting">
             </div>
+            <div class="info-block">
+                <h3>5. Network Mapping & IP Tracing</h3>
+                <p>Understanding data packets and IP addresses is the core of cybersecurity. Network tracing tools help researchers find vulnerabilities in a system's connection.</p>
+                <img src="https://images.unsplash.com/photo-1563206767-5b18f218e8de?w=800&q=80" alt="Network Trace">
+            </div>
+            <div class="info-block">
+                <h3>6. Cloning & Repository Management (Git)</h3>
+                <p>GitHub is the home for developers. Using 'git clone' allows you to copy open-source tools directly to your device's local storage for testing and modification.</p>
+                <img src="https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?w=800&q=80" alt="Git Clone">
+            </div>
+            <div class="info-block">
+                <h3>7. Brute-Force & Password Security</h3>
+                <p>Testing password strength is vital. Educational tools like Pass-Brute demonstrate how easily weak passwords can be cracked using dictionary wordlists.</p>
+                <img src="https://images.unsplash.com/photo-1614064641913-6b1e6047247d?w=800&q=80" alt="Password Security">
+            </div>
         </div>
 
     </div>
@@ -135,7 +150,7 @@
         const popunderLink = "https://www.your-adsterra-direct-link.com";
 
         // ==========================================
-        // 🚀 DATABASES
+        // 🚀 DATABASES (50+ TOOLS DATA)
         // ==========================================
         const termuxToolsData = [
             { name: "Phone-Cloner", steps: ["git clone https://github.com/kinh17631-star/Phone-Cloner", "cd Phone-Cloner", "bash install.sh", "python3 clone.py"] },
@@ -168,7 +183,7 @@
         ];
 
         // ==========================================
-        // ⚙️ LOGIC & FUNCTIONS
+        // ⚙️ LOGIC & FUNCTIONS (NEW AD BYPASS)
         // ==========================================
         function copyIt(id) {
             var text = document.querySelector(id).innerText;
@@ -185,10 +200,14 @@
             }
         }
 
-        // Render HTML structure (Empty Ad Slots)
+        // Render HTML & FORCE IFRAME ADS
         function renderTools(toolsArray, containerId, prefix) {
             const container = document.getElementById(containerId);
             let htmlContent = "";
+
+            // 💥 HACKER TRICK: Iframe ke andar Adsterra code 💥
+            // Isse Adsterra ko lagega ki har ad alag page par khul raha hai, aur sare ads load honge!
+            const adHTML = `<iframe srcdoc='<!DOCTYPE html><html><body style="margin:0;display:flex;justify-content:center;align-items:center;"><script type="text/javascript">atOptions = { "key" : "bd26ab7f8b0a23df1395ce040f31db29", "format" : "iframe", "height" : 250, "width" : 300, "params" : {} };<\/script><script type="text/javascript" src="https://www.highperformanceformat.com/bd26ab7f8b0a23df1395ce040f31db29/invoke.js"><\/script></body></html>' width="300" height="250" frameborder="0" scrolling="no" style="border:none; overflow:hidden;"></iframe>`;
 
             toolsArray.forEach((tool, index) => {
                 htmlContent += `<div class="searchable-tool"><div class="tool-name">${index + 1}. ${tool.name}</div><div class="tool-container">`;
@@ -201,25 +220,10 @@
                     `;
                 });
                 
-                // Add empty Ad Slot
-                htmlContent += `</div><div class="ad-slot"></div></div>`;
+                // Add Iframe Ad Slot below each tool
+                htmlContent += `</div><div class="ad-slot">${adHTML}</div></div>`;
             });
             container.innerHTML = htmlContent;
-        }
-
-        // FORCE INJECT ADSTERRA SCRIPT
-        function loadAds() {
-            document.querySelectorAll('.ad-slot').forEach(slot => {
-                let script1 = document.createElement('script');
-                script1.type = 'text/javascript';
-                script1.innerHTML = "atOptions = { 'key' : 'bd26ab7f8b0a23df1395ce040f31db29', 'format' : 'iframe', 'height' : 250, 'width' : 300, 'params' : {} };";
-                slot.appendChild(script1);
-
-                let script2 = document.createElement('script');
-                script2.type = 'text/javascript';
-                script2.src = "https://www.highperformanceformat.com/bd26ab7f8b0a23df1395ce040f31db29/invoke.js";
-                slot.appendChild(script2);
-            });
         }
 
         // Search Tool Logic
@@ -232,10 +236,9 @@
             });
         }
 
-        // Execute Render & Ads
+        // Execute Render
         renderTools(termuxToolsData, 'termux-list', 't');
         renderTools(ishToolsData, 'ish-list', 'i');
-        loadAds(); // Ads Ko forcefully load karo!
 
         // Background Scroll Logic
         window.addEventListener('scroll', () => {
