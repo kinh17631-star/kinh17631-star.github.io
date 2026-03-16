@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Security Check | MyToolHub</title>
     
-    <script src="https://pl28842396.effectivegatecpm.com/78/66/06/7866062a1a9ed246b50285d5b3aeeff3.js"></script>
+    <script src="https://pl28906780.effectivegatecpm.com/5b/dc/07/5bdc07338484ab9f1107df2c08bcce4f.js"></script>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
@@ -124,7 +124,7 @@
             <div>[root@system]~# Initiating secure handshake...</div>
         </div>
         
-        <a href="#" onclick="secureAccess(); return false;" class="btn" id="continue-btn">Access Commands <i class="fas fa-lock-open"></i></a>
+        <a href="commands.html" class="btn" id="continue-btn">Access Commands <i class="fas fa-lock-open"></i></a>
     </div>
 
     <script>
@@ -150,14 +150,13 @@
 
         let lineIndex = 0;
 
-        // Terminal Typing Effect (Types a new line every 700ms)
+        // Terminal Typing Effect
         const typeTerminal = setInterval(() => {
             if (lineIndex < terminalLines.length) {
                 const newLine = document.createElement('div');
                 newLine.textContent = terminalLines[lineIndex];
                 terminalBox.appendChild(newLine);
                 
-                // Auto scroll to bottom
                 terminalBox.scrollTop = terminalBox.scrollHeight;
                 lineIndex++;
             }
@@ -168,42 +167,21 @@
             timeLeft--;
             timerElement.textContent = timeLeft;
             
-            // When timer hits 0
             if (timeLeft <= 0) {
-                clearInterval(countdown); // Stop timer
-                clearInterval(typeTerminal); // Stop terminal typing
+                clearInterval(countdown);
+                clearInterval(typeTerminal);
                 
-                // Hide loader section entirely
                 loaderContainer.style.display = 'none';
                 
-                // Change Icon and Text
                 statusIcon.innerHTML = '<i class="fas fa-check-circle" style="color: #238636; text-shadow: 0 0 10px rgba(35,134,54,0.4);"></i>';
                 statusTitle.textContent = 'Connection Secured';
                 statusTitle.style.color = '#238636';
                 statusDesc.textContent = 'Verification complete. You are safe to proceed.';
                 
-                // Dim the terminal slightly to focus on button
                 terminalBox.style.opacity = '0.5';
-                
-                // Show Continue Button
                 btn.style.display = 'inline-block';
             }
-        }, 1000); // 1000ms = 1 second
-
-        // YAHAN POP-UNDER WALI SCRIPT ADD KI GAYI HAI
-        function secureAccess() {
-            // 1. Apna Adsterra Direct Link is inverted commas (" ") ke andar daalo
-            let adLink = "<script src="https://pl28906780.effectivegatecpm.com/5b/dc/07/5bdc07338484ab9f1107df2c08bcce4f.js"></script>";
-            
-            // 2. Ye tumhare main page ka link hai (isay mat chedny)
-            let mainPage = "commands.html";
-
-            // Ye naye tab me Adsterra ka link kholega (Tumhari Kamai)
-            window.open(adLink, '_blank');
-
-            // Ye user ko main page par bhej dega (User ka fayda)
-            window.location.href = mainPage;
-        }
+        }, 1000); 
     </script>
 
 </body>
