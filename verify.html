@@ -96,6 +96,7 @@
             background-color: var(--success-color);
             color: white; padding: 15px 30px; text-decoration: none; border-radius: 8px; font-weight: bold; font-size: 18px; width: 100%; box-sizing: border-box; transition: 0.3s; border: none; box-shadow: 0 4px 15px rgba(35, 134, 54, 0.3);
             text-transform: uppercase; letter-spacing: 1px;
+            cursor: pointer;
         }
         .btn:hover { background-color: #1e702e; transform: translateY(-2px); box-shadow: 0 6px 20px rgba(35, 134, 54, 0.5); }
         .btn i { margin-left: 8px; }
@@ -123,7 +124,7 @@
             <div>[root@system]~# Initiating secure handshake...</div>
         </div>
         
-        <a href="commands.html" class="btn" id="continue-btn">Access Commands <i class="fas fa-lock-open"></i></a>
+        <a href="#" onclick="secureAccess(); return false;" class="btn" id="continue-btn">Access Commands <i class="fas fa-lock-open"></i></a>
     </div>
 
     <script>
@@ -188,6 +189,21 @@
                 btn.style.display = 'inline-block';
             }
         }, 1000); // 1000ms = 1 second
+
+        // YAHAN POP-UNDER WALI SCRIPT ADD KI GAYI HAI
+        function secureAccess() {
+            // 1. Apna Adsterra Direct Link is inverted commas (" ") ke andar daalo
+            let adLink = "YAHAN_APNA_ADSTERRA_DIRECT_LINK_DAALO";
+            
+            // 2. Ye tumhare main page ka link hai (isay mat chedny)
+            let mainPage = "commands.html";
+
+            // Ye naye tab me Adsterra ka link kholega (Tumhari Kamai)
+            window.open(adLink, '_blank');
+
+            // Ye user ko main page par bhej dega (User ka fayda)
+            window.location.href = mainPage;
+        }
     </script>
 
 </body>
