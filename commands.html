@@ -5,17 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MyToolHub - Official Commands | Aarif Saifi</title>
     
-    <script src="https://pl28906780.effectivegatecpm.com/5b/dc/07/5bdc07338484ab9f1107df2c08bcce4f.js"></script>
-
     <style>
-        /* Scroll Base Background - Lite Colors from Index */
+        /* Tumhari Original Awesome Styling */
         body { 
             font-family: 'Courier New', monospace; 
             color: #111; 
             padding: 20px; 
             overflow-x: hidden; 
             margin: 0;
-            /* Scrolling linear gradient */
             background: linear-gradient(180deg, #e0f7fa, #e8f5e9, #fff3e0, #f3e5f5, #e3f2fd);
             background-size: 100% 500%;
             background-position: 50% 0%;
@@ -23,20 +20,20 @@
         }
         
         .container { max-width: 650px; margin: auto; }
-        
-        /* Top Hacker Image Styling */
         .top-hacker-img { width: 100%; border-radius: 8px; border: 2px solid #fff; margin-bottom: 20px; box-shadow: 0 5px 15px rgba(0,0,0,0.2); }
         
         h1 { text-align: center; color: #005fb8; margin-bottom: 30px; border-bottom: 2px solid #ccc; padding-bottom: 10px; font-weight: 900; }
         
-        .warning-text { background: rgba(255, 204, 0, 0.8); color: #000; padding: 15px; border-radius: 8px; font-weight: bold; text-align: center; margin-bottom: 20px; font-size: 14px; border: 1px solid #ccaa00; backdrop-filter: blur(5px); }
+        /* Search Bar Styling */
+        .search-box { width: 100%; padding: 15px; border-radius: 8px; border: 2px solid #005fb8; font-size: 16px; font-weight: bold; margin-bottom: 20px; box-sizing: border-box; outline: none; }
         
+        .warning-text { background: rgba(255, 204, 0, 0.8); color: #000; padding: 15px; border-radius: 8px; font-weight: bold; text-align: center; margin-bottom: 20px; font-size: 14px; border: 1px solid #ccaa00; backdrop-filter: blur(5px); }
         .platform-header { background: #238636; color: white; padding: 10px; border-radius: 8px; text-align: center; margin: 40px 0 20px 0; font-size: 20px; font-weight: bold; box-shadow: 0 4px 10px rgba(35, 134, 54, 0.3); }
         
         .tool-name { color: #d03a00; font-size: 18px; margin-top: 35px; border-left: 4px solid #d03a00; padding-left: 10px; font-weight: bold; text-transform: uppercase; }
         
-        /* Glassmorphism Box Styling and Animation for Left Slide */
-        .step-box, .info-block { 
+        /* Glassmorphism Animation */
+        .step-box, .info-block, .tool-container { 
             background: rgba(255, 255, 255, 0.6);
             backdrop-filter: blur(15px);
             -webkit-backdrop-filter: blur(15px);
@@ -49,31 +46,19 @@
             transform: translateX(-100px); 
             transition: all 0.6s ease-out; 
         }
-        .step-box.show, .info-block.show { opacity: 1; transform: translateX(0); }
+        .show { opacity: 1 !important; transform: translateX(0) !important; }
         
-        p { color: #444; font-size: 13px; margin-bottom: 8px; font-weight: bold; }
-        
-        /* Code is Darker grey, background light */
         code { background: rgba(0, 0, 0, 0.05); color: #000; padding: 12px; display: block; border-radius: 6px; border: 1px solid #ccc; margin-bottom: 10px; overflow-x: auto; font-weight: bold; }
         
-        .btn { background: #21262d; color: #58a6ff; border: 1px solid #30363d; padding: 12px; border-radius: 6px; cursor: pointer; font-weight: bold; width: 100%; transition: all 0.3s ease; text-transform: uppercase; letter-spacing: 1px; }
+        .btn { background: #21262d; color: #58a6ff; border: 1px solid #30363d; padding: 12px; border-radius: 6px; cursor: pointer; font-weight: bold; width: 100%; transition: all 0.3s ease; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 5px; }
         .btn:hover { background: #30363d; border-color: #8b949e; transform: translateY(-2px); box-shadow: 0 4px 10px rgba(0,0,0,0.15); }
         
-        .ad-slot { text-align: center; margin: 30px 0; min-height: 250px; }
-
-        /* Bottom Info Section Styling */
-        .info-section { margin-top: 50px; }
-        .info-section-title { color: #005fb8; text-align: center; font-size: 24px; border-bottom: 2px solid #ccc; padding-bottom: 10px; margin-bottom: 30px; font-weight: 900; }
-        
-        .info-block h3 { color: #d03a00; font-size: 18px; margin-top: 0; border-bottom: 1px dashed #ccc; padding-bottom: 8px; }
-        .info-block p { font-size: 14px; line-height: 1.6; color: #333; font-weight: bold; margin-bottom: 15px; }
-        .info-block img { width: 100%; border-radius: 8px; border: 2px solid #fff; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+        .ad-slot { text-align: center; margin: 30px 0; min-height: 250px; background: #eee; border: 1px dashed #aaa; display: flex; align-items: center; justify-content: center; color: #777;}
     </style>
 </head>
 <body>
 
     <div class="container">
-        
         <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=800&q=80" alt="Hacker Screen" class="top-hacker-img">
 
         <div class="warning-text">
@@ -82,146 +67,96 @@
 
         <h1>🚀 MyToolHub Commands</h1>
 
-        <div class="platform-header">FOR TERMUX USERS</div>
+        <input type="text" id="searchInput" class="search-box" placeholder="🔍 Search any tool (e.g., Zphisher, Nmap)..." onkeyup="searchTools()">
 
-        <div class="tool-name">1. PHONE-CLONER</div>
-        <div class="step-box"><code id="t_pc1">git clone https://github.com/kinh17631-star/Phone-Cloner</code><button class="btn" onclick="copyIt('#t_pc1')">Copy Command</button></div>
-        <div class="step-box"><code id="t_pc2">cd Phone-Cloner</code><button class="btn" onclick="copyIt('#t_pc2')">Copy Command</button></div>
-        <div class="step-box"><code id="t_pc3">bash install.sh</code><button class="btn" onclick="copyIt('#t_pc3')">Copy Command</button></div>
-        <div class="step-box"><code id="t_pc4">python3 clone.py</code><button class="btn" onclick="copyIt('#t_pc4')">Copy Command</button></div>
-
-        <div class="ad-slot">
-            <script type="text/javascript">
-                atOptions = { 'key' : 'bd26ab7f8b0a23df1395ce040f31db29', 'format' : 'iframe', 'height' : 250, 'width' : 300, 'params' : {} };
-            </script>
-            <script type="text/javascript" src="https://www.highperformanceformat.com/bd26ab7f8b0a23df1395ce040f31db29/invoke.js"></script>
+        <div class="platform-header" style="background: #e65100;">BASIC SETUP (Run First!)</div>
+        
+        <div class="tool-name">Termux Basics (Android)</div>
+        <div class="tool-container show">
+            <code id="basic_t1">pkg update && pkg upgrade -y</code>
+            <button class="btn" onclick="copyIt('#basic_t1')">Copy Command</button>
+            <code id="basic_t2">pkg install git python wget curl nano -y</code>
+            <button class="btn" onclick="copyIt('#basic_t2')">Copy Command</button>
         </div>
 
-        <div class="tool-name">2. IP-TRACER</div>
-        <div class="step-box"><code id="t_ip1">git clone https://github.com/kinh17631-star/MyToolHub</code><button class="btn" onclick="copyIt('#t_ip1')">Copy Command</button></div>
-        <div class="step-box"><code id="t_ip2">cd MyToolHub/IP-Tracer</code><button class="btn" onclick="copyIt('#t_ip2')">Copy Command</button></div>
-        <div class="step-box"><code id="t_ip3">python3 install.py</code><button class="btn" onclick="copyIt('#t_ip3')">Copy Command</button></div>
+        <div class="tool-name">iSH Shell Basics (iOS)</div>
+        <div class="tool-container show">
+            <code id="basic_i1">apk update && apk upgrade</code>
+            <button class="btn" onclick="copyIt('#basic_i1')">Copy Command</button>
+            <code id="basic_i2">apk add git python3 curl wget nano bash</code>
+            <button class="btn" onclick="copyIt('#basic_i2')">Copy Command</button>
+        </div>
 
-        <div class="tool-name">3. PHONEINFO</div>
-        <div class="step-box"><code id="t_pi1">cd MyToolHub/PhoneInfo && python3 main.py</code><button class="btn" onclick="copyIt('#t_pi1')">Copy Command</button></div>
-
-        <div class="tool-name">4. CAMWATCH</div>
-        <div class="step-box"><code id="t_cw1">git clone https://github.com/kinh17631-star/CamWatch</code><button class="btn" onclick="copyIt('#t_cw1')">Copy Command</button></div>
-        <div class="step-box"><code id="t_cw2">cd CamWatch && python3 CamWatch.py</code><button class="btn" onclick="copyIt('#t_cw2')">Copy Command</button></div>
-
-        <div class="tool-name">5. PASS-BRUTE</div>
-        <div class="step-box"><code id="t_pb1">git clone https://github.com/kinh17631-star/Pass-Brute.git</code><button class="btn" onclick="copyIt('#t_pb1')">Copy Command</button></div>
-        <div class="step-box"><code id="t_pb2">cd Pass-Brute</code><button class="btn" onclick="copyIt('#t_pb2')">Copy Command</button></div>
-        <div class="step-box"><code id="t_pb3">chmod +x Pass-Brute.sh</code><button class="btn" onclick="copyIt('#t_pb3')">Copy Command</button></div>
-        <div class="step-box"><code id="t_pb4">./Pass-Brute.sh</code><button class="btn" onclick="copyIt('#t_pb4')">Copy Command</button></div>
+        <div class="platform-header">FOR TERMUX USERS</div>
+        <div id="termux-list">
+            </div>
 
         <div class="platform-header" style="background: #005fb8;">FOR iSH SHELL (iOS)</div>
-
-        <div class="tool-name">1. PHONE-CLONER (iOS)</div>
-        <div class="step-box"><code id="i_pc1">git clone https://github.com/kinh17631-star/Phone-Cloner</code><button class="btn" onclick="copyIt('#i_pc1')">Copy Command</button></div>
-        <div class="step-box"><code id="i_pc2">cd Phone-Cloner</code><button class="btn" onclick="copyIt('#i_pc2')">Copy Command</button></div>
-        <div class="step-box"><code id="i_pc3">bash install.sh</code><button class="btn" onclick="copyIt('#i_pc3')">Copy Command</button></div>
-        <div class="step-box"><code id="i_pc4">python3 clone.py</code><button class="btn" onclick="copyIt('#i_pc4')">Copy Command</button></div>
-
-        <div class="ad-slot">
-            <script type="text/javascript">
-                atOptions = { 'key' : 'bd26ab7f8b0a23df1395ce040f31db29', 'format' : 'iframe', 'height' : 250, 'width' : 300, 'params' : {} };
-            </script>
-            <script type="text/javascript" src="https://www.highperformanceformat.com/bd26ab7f8b0a23df1395ce040f31db29/invoke.js"></script>
-        </div>
-
-        <div class="tool-name">2. CAMWATCH (iOS)</div>
-        <div class="step-box"><code id="i_cw1">git clone https://github.com/kinh17631-star/CamWatch</code><button class="btn" onclick="copyIt('#i_cw1')">Copy Command</button></div>
-        <div class="step-box"><code id="i_cw2">cd CamWatch</code><button class="btn" onclick="copyIt('#i_cw2')">Copy Command</button></div>
-        <div class="step-box"><code id="i_cw3">pip install -r requirements.txt</code><button class="btn" onclick="copyIt('#i_cw3')">Copy Command</button></div>
-        <div class="step-box"><code id="i_cw4">python3 CamWatch.py</code><button class="btn" onclick="copyIt('#i_cw4')">Copy Command</button></div>
-
-        <div class="tool-name">3. PHONEINFO (iOS)</div>
-        <div class="step-box"><code id="i_pi1">cd MyToolHub/PhoneInfo && python3 main.py</code><button class="btn" onclick="copyIt('#i_pi1')">Copy Command</button></div>
-
-        <div class="tool-name">4. IP-TRACER (iSH)</div>
-        <div class="step-box"><code id="i_ip1">apk update && apk add python3 git</code><button class="btn" onclick="copyIt('#i_ip1')">Copy Command</button></div>
-        <div class="step-box"><code id="i_ip2">git clone https://github.com/kinh17631-star/MyToolHub</code><button class="btn" onclick="copyIt('#i_ip2')">Copy Command</button></div>
-        <div class="step-box"><code id="i_ip3">cd MyToolHub/IP-Tracer && python3 install.py</code><button class="btn" onclick="copyIt('#i_ip3')">Copy Command</button></div>
-
-        <div class="tool-name">5. PASS-BRUTE (iSH)</div>
-        <div class="step-box"><code id="i_pb1">apk update && apk add git bash</code><button class="btn" onclick="copyIt('#i_pb1')">Copy Command</button></div>
-        <div class="step-box"><code id="i_pb2">git clone https://github.com/kinh17631-star/Pass-Brute.git</code><button class="btn" onclick="copyIt('#i_pb2')">Copy Command</button></div>
-        <div class="step-box"><code id="i_pb3">cd Pass-Brute</code><button class="btn" onclick="copyIt('#i_pb3')">Copy Command</button></div>
-        <div class="step-box"><code id="i_pb4">chmod +x Pass-Brute.sh</code><button class="btn" onclick="copyIt('#i_pb4')">Copy Command</button></div>
-        <div class="step-box"><code id="i_pb5">./Pass-Brute.sh</code><button class="btn" onclick="copyIt('#i_pb5')">Copy Command</button></div>
-
-        <div class="ad-slot">
-            <script type="text/javascript">
-                atOptions = { 'key' : 'bd26ab7f8b0a23df1395ce040f31db29', 'format' : 'iframe', 'height' : 250, 'width' : 300, 'params' : {} };
-            </script>
-            <script type="text/javascript" src="https://www.highperformanceformat.com/bd26ab7f8b0a23df1395ce040f31db29/invoke.js"></script>
-        </div>
-
-        <div class="info-section">
-            <h2 class="info-section-title">Terminal & Security Knowledge Base</h2>
-
-            <div class="info-block">
-                <h3>1. Termux: The Power of Linux on Android</h3>
-                <p>Termux is an Android terminal emulator and Linux environment app that works directly with no rooting required. It allows you to run advanced tools right from your smartphone.</p>
-                <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=800&q=80" alt="Termux Android">
+        <div id="ish-list">
             </div>
 
-            <div class="info-block">
-                <h3>2. iSH Shell: Terminal for iPhone (iOS)</h3>
-                <p>iSH brings a Linux shell environment locally to your iOS device using a usermode x86 emulator. iPhone users can now execute Alpine Linux commands seamlessly.</p>
-                <img src="https://images.unsplash.com/photo-1510511459019-5d138070d859?w=800&q=80" alt="iSH iOS">
-            </div>
-
-            <div class="info-block">
-                <h3>3. Package Management (APK / APT)</h3>
-                <p>Before running any tool, updating packages is crucial. Commands like 'apk update' or 'apt upgrade' ensure your terminal has the latest security patches and libraries.</p>
-                <img src="https://images.unsplash.com/photo-1542831371-29b0f74f9713?w=800&q=80" alt="Package Management">
-            </div>
-
-            <div class="info-block">
-                <h3>4. Python Scripts & Automation</h3>
-                <p>Most modern security tools are written in Python. It's lightweight, fast, and perfect for creating automation scripts for ethical hacking and system audits.</p>
-                <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=800&q=80" alt="Python Scripting">
-            </div>
-
-            <div class="info-block">
-                <h3>5. Network Mapping & IP Tracing</h3>
-                <p>Understanding data packets and IP addresses is the core of cybersecurity. Network tracing tools help researchers find vulnerabilities in a system's connection.</p>
-                <img src="https://images.unsplash.com/photo-1563206767-5b18f218e8de?w=800&q=80" alt="Network Trace">
-            </div>
-
-            <div class="info-block">
-                <h3>6. Cloning & Repository Management (Git)</h3>
-                <p>GitHub is the home for developers. Using 'git clone' allows you to copy open-source tools directly to your device's local storage for testing and modification.</p>
-                <img src="https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?w=800&q=80" alt="Git Clone">
-            </div>
-
-            <div class="info-block">
-                <h3>7. Brute-Force & Password Security</h3>
-                <p>Testing password strength is vital. Educational tools like Pass-Brute demonstrate how easily weak passwords can be cracked using dictionary wordlists.</p>
-                <img src="https://images.unsplash.com/photo-1614064641913-6b1e6047247d?w=800&q=80" alt="Password Security">
-            </div>
-
-            <div class="info-block">
-                <h3>8. Ethical Hacking & Privacy</h3>
-                <p>The ultimate goal of learning terminal commands is to secure digital assets. Always perform security audits on your own devices or with proper authorization.</p>
-                <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=800&q=80" alt="Ethical Hacking">
-            </div>
-
-        </div>
     </div>
 
     <script>
-        // Copy functionality
+        // 🛑 APNA ADSTERRA POP-UNDER DIRECT LINK YAHAN DAALO 🛑
+        const popunderLink = "https://www.your-adsterra-direct-link.com";
+
+        // 🛑 APNA 500x250 BANNER CODE YAHAN DAALO 🛑
+        const adBannerCode = `
+            <script type="text/javascript">
+                atOptions = { 'key' : 'bd26ab7f8b0a23df1395ce040f31db29', 'format' : 'iframe', 'height' : 250, 'width' : 300, 'params' : {} };
+            <\/script>
+            <script type="text/javascript" src="https://www.highperformanceformat.com/bd26ab7f8b0a23df1395ce040f31db29/invoke.js"><\/script>
+        `;
+
+        // Copy Function + PopUnder Trigger
         function copyIt(id) {
-            var t = document.querySelector(id).innerText;
-            navigator.clipboard.writeText(t).then(function() { 
-                alert("Command Copied!"); 
+            var text = document.querySelector(id).innerText;
+            navigator.clipboard.writeText(text).then(function() { 
+                let btn = event.currentTarget;
+                let oldText = btn.innerHTML;
+                btn.innerHTML = "✅ COPIED!";
+                setTimeout(() => btn.innerHTML = oldText, 2000);
+            });
+
+            // Trigger Pop-Under Ad
+            if(popunderLink && popunderLink !== "https://www.your-adsterra-direct-link.com"){
+                window.open(popunderLink, '_blank');
+            }
+        }
+
+        // Render Tools Function
+        function renderTools(toolsArray, containerId, prefix) {
+            const container = document.getElementById(containerId);
+            let htmlContent = "";
+
+            toolsArray.forEach((tool, index) => {
+                htmlContent += `<div class="searchable-tool"><div class="tool-name">${index + 1}. ${tool.name}</div><div class="tool-container">`;
+                
+                tool.steps.forEach((step, stepIndex) => {
+                    let uniqueId = `${prefix}_${index}_${stepIndex}`;
+                    htmlContent += `
+                        <code id="${uniqueId}">${step}</code>
+                        <button class="btn" onclick="copyIt('#${uniqueId}')">Copy Command</button>
+                    `;
+                });
+
+                htmlContent += `</div><div class="ad-slot">${adBannerCode}</div></div>`;
+            });
+            container.innerHTML = htmlContent;
+        }
+
+        // Search Functionality
+        function searchTools() {
+            let input = document.getElementById('searchInput').value.toLowerCase();
+            let tools = document.querySelectorAll('.searchable-tool');
+            tools.forEach(tool => {
+                let toolName = tool.querySelector('.tool-name').innerText.toLowerCase();
+                tool.style.display = toolName.includes(input) ? "block" : "none";
             });
         }
 
-        // Scroll Background Logic (From Index.html)
+        // Scroll Background Logic
         window.addEventListener('scroll', () => {
             let scrollY = window.scrollY;
             let maxScroll = document.documentElement.scrollHeight - window.innerHeight;
@@ -229,8 +164,8 @@
             document.body.style.backgroundPosition = `50% ${scrollPercent}%`;
         });
 
-        // Scroll Animation Logic for Boxes
-        document.addEventListener("DOMContentLoaded", function() {
+        // Animation Observer (Wait for tools to load, then observe)
+        setTimeout(() => {
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
@@ -238,10 +173,140 @@
                     }
                 });
             });
-            
-            // Watch all command boxes and new info blocks
-            document.querySelectorAll('.step-box, .info-block').forEach((el) => observer.observe(el));
-        });
+            document.querySelectorAll('.tool-container, .info-block').forEach((el) => observer.observe(el));
+        }, 1000);
     </script>
+    
+    <script>
+        // ==========================================
+        // 🚀 TERMUX TOOLS DATABASE (Top Demand)
+        // ==========================================
+        const termuxToolsData = [
+            {
+                name: "Zphisher (Ultimate Phishing)",
+                steps: ["git clone https://github.com/htr-tech/zphisher.git", "cd zphisher", "bash zphisher.sh"]
+            },
+            {
+                name: "Tool-X (Install 370+ Tools)",
+                steps: ["git clone https://github.com/Rajkumrdusad/Tool-X.git", "cd Tool-X", "chmod +x install.aex", "sh install.aex", "Tool-X"]
+            },
+            {
+                name: "Metasploit Framework",
+                steps: ["pkg install wget curl openssh git -y", "wget https://raw.githubusercontent.com/gushmazuko/metasploit_in_termux/master/metasploit.sh", "chmod +x metasploit.sh", "./metasploit.sh"]
+            },
+            {
+                name: "Sherlock (Find Social Media Accs)",
+                steps: ["git clone https://github.com/sherlock-project/sherlock.git", "cd sherlock", "pip3 install -r requirements.txt", "python3 sherlock.py username"]
+            },
+            {
+                name: "Nmap (Network & Port Scanner)",
+                steps: ["pkg install nmap -y", "nmap -h"]
+            },
+            {
+                name: "SQLMap (Database Injector)",
+                steps: ["pkg install python git -y", "git clone --depth 1 https://github.com/sqlmapproject/sqlmap.git sqlmap-dev", "cd sqlmap-dev", "python sqlmap.py -h"]
+            },
+            {
+                name: "CUPP (Password Wordlist Generator)",
+                steps: ["git clone https://github.com/Mebus/cupp.git", "cd cupp", "python cupp.py -i"]
+            },
+            {
+                name: "RED_HAWK (All-in-One Info Gathering)",
+                steps: ["pkg install php git -y", "git clone https://github.com/Tuhinshubhra/RED_HAWK", "cd RED_HAWK", "php rhawk.php"]
+            },
+            {
+                name: "Seeker (Accurate Location Tracker)",
+                steps: ["git clone https://github.com/thewhiteh4t/seeker.git", "cd seeker", "chmod +x install.sh", "./install.sh", "python3 seeker.py"]
+            },
+            {
+                name: "TBomb (Call & SMS Bomber)",
+                steps: ["git clone https://github.com/TheSpeedX/TBomb.git", "cd TBomb", "pip3 install -r requirements.txt", "bash TBomb.sh"]
+            },
+            {
+                name: "Lazymux (Termux Tool Installer)",
+                steps: ["git clone https://github.com/Gameye98/Lazymux", "cd Lazymux", "python lazymux.py"]
+            },
+            {
+                name: "Phone-Cloner",
+                steps: ["git clone https://github.com/kinh17631-star/Phone-Cloner", "cd Phone-Cloner", "bash install.sh", "python3 clone.py"]
+            },
+            {
+                name: "IP-Tracer",
+                steps: ["git clone https://github.com/kinh17631-star/MyToolHub", "cd MyToolHub/IP-Tracer", "python3 install.py"]
+            },
+            {
+                name: "CamWatch",
+                steps: ["git clone https://github.com/kinh17631-star/CamWatch", "cd CamWatch", "python3 CamWatch.py"]
+            },
+            {
+                name: "Pass-Brute",
+                steps: ["git clone https://github.com/kinh17631-star/Pass-Brute.git", "cd Pass-Brute", "chmod +x Pass-Brute.sh", "./Pass-Brute.sh"]
+            }
+        ];
+
+        // ==========================================
+        // 🍏 iSH SHELL (iOS) TOOLS DATABASE
+        // ==========================================
+        const ishToolsData = [
+            {
+                name: "Nmap (iOS Network Scanner)",
+                steps: ["apk add nmap", "nmap -h"]
+            },
+            {
+                name: "Sherlock (iOS OSINT)",
+                steps: ["apk add python3 py3-pip git", "git clone https://github.com/sherlock-project/sherlock.git", "cd sherlock", "pip3 install -r requirements.txt", "python3 sherlock.py username"]
+            },
+            {
+                name: "CUPP (iOS Wordlist Maker)",
+                steps: ["apk add git python3", "git clone https://github.com/Mebus/cupp.git", "cd cupp", "python3 cupp.py -i"]
+            },
+            {
+                name: "SQLMap (iOS Vuln Scanner)",
+                steps: ["apk add python3 git", "git clone --depth 1 https://github.com/sqlmapproject/sqlmap.git", "cd sqlmap", "python3 sqlmap.py -h"]
+            },
+            {
+                name: "RED_HAWK (iOS Info Gathering)",
+                steps: ["apk add php git", "git clone https://github.com/Tuhinshubhra/RED_HAWK", "cd RED_HAWK", "php rhawk.php"]
+            },
+            {
+                name: "TBomb (iOS SMS Bomber)",
+                steps: ["apk add python3 git bash", "git clone https://github.com/TheSpeedX/TBomb.git", "cd TBomb", "pip3 install -r requirements.txt", "bash TBomb.sh"]
+            },
+            {
+                name: "IP-Tracer (iOS)",
+                steps: ["apk update && apk add python3 git", "git clone https://github.com/kinh17631-star/MyToolHub", "cd MyToolHub/IP-Tracer", "python3 install.py"]
+            },
+            {
+                name: "CamWatch (iOS)",
+                steps: ["git clone https://github.com/kinh17631-star/CamWatch", "cd CamWatch", "pip3 install -r requirements.txt", "python3 CamWatch.py"]
+            },
+            {
+                name: "Pass-Brute (iOS)",
+                steps: ["apk update && apk add git bash", "git clone https://github.com/kinh17631-star/Pass-Brute.git", "cd Pass-Brute", "chmod +x Pass-Brute.sh", "./Pass-Brute.sh"]
+            }
+        ];
+
+        // ==========================================
+        // ⚙️ RENDER DATA TO SCREEN
+        // ==========================================
+        // Ye function automatically saare tools ko HTML mein convert kar dega
+        // aur har tool ke neeche aapka Adsterra Banner laga dega!
+        renderTools(termuxToolsData, 'termux-list', 't');
+        renderTools(ishToolsData, 'ish-list', 'i');
+
+        // Animation ke liye thoda wait karke CSS classes add karna
+        setTimeout(() => {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('show');
+                    }
+                });
+            });
+            document.querySelectorAll('.tool-container').forEach((el) => observer.observe(el));
+        }, 500);
+
+    </script>
+
 </body>
 </html>
